@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901360835/PATH/delimiter=;
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901360835/PATH/operation=replace
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901360835/PATH/value=${SmartRover_DevFrame_Base_Directory}\\tools\\Cross_Build_Tools;${SmartRover_DevFrame_Base_Directory}\\tools\\gcc-arm-none-eabi-4_8-2014q2-20140609-win32\\bin;${Path}
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901360835/append=true
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901360835/appendContributed=true
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1007255176/PATH/delimiter=;
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1007255176/PATH/operation=replace
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1007255176/PATH/value=${SmartRover_DevFrame_Base_Directory}\\tools\\Cross_Build_Tools;${SmartRover_DevFrame_Base_Directory}\\tools\\gcc-arm-none-eabi-4_8-2014q2-20140609-win32\\bin;${Path}
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1007255176/append=true
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1007255176/appendContributed=true
