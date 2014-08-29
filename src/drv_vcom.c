@@ -39,7 +39,10 @@
 //-- 내부 함수
 //
 
-
+static void usb_putc(void *p, char c)
+{
+    Hw_VCom_Putch(c);
+}
 
 
 
@@ -105,7 +108,10 @@ extern void USB_Send_Data( u8 SendData );
 ---------------------------------------------------------------------------*/
 void Hw_VCom_Putch( char Uart_PutData )
 {
-	USB_Send_Data( Uart_PutData );
+	if( bDeviceState == CONFIGURED )
+	{
+		USB_Send_Data( Uart_PutData );
+	}
 }
 
 
@@ -151,7 +157,7 @@ void Hw_VCom_PrintEx( char *UartPrintData )
 ---------------------------------------------------------------------------*/
 void Hw_VCom_Printf( char *format, ... )
 {
-	char Str[200];
+	//char Str[200];
 	
 	//va_list ap;
 	
@@ -159,12 +165,16 @@ void Hw_VCom_Printf( char *format, ... )
 
 	//vsprintf( Str, format, ap );	
 
-	sprintf(Str, format );
+	//sprintf(Str, format );
 	
 	//va_end(ap);	
 	
-	
-	
-	
-	Hw_VCom_PrintEx( Str );
+	//Hw_VCom_PrintEx( Str );
+
+
+    va_list va;
+    va_start(va, format);
+    tfp_format(NULL, usb_putc, format, va);
+    va_end(va);		
+
 }

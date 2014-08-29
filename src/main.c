@@ -37,13 +37,17 @@ static void Thread_Serial(void const *argument)
     {
         if( bDeviceState == CONFIGURED )
         {
-            Hw_VCom_Putch('u');
-            Hw_VCom_Putch('s');
-            Hw_VCom_Putch('b');
-            Hw_VCom_Putch(' ');
+            //Hw_VCom_Putch('u');
+            //Hw_VCom_Putch('s');
+            //Hw_VCom_Putch('b');
+            //Hw_VCom_Putch(' ');
+
+			Hw_VCom_Printf( "Angle : %d\t %d\t %d\t"  , angle[0], angle[1], heading );
+			Hw_VCom_Printf( "rc :\t %d\t %d\t %d\t %d\t \r\n", rcCommand[0], rcCommand[1], rcCommand[2], rcCommand[3] );
+
 
         }
-        osDelay(1000);
+        osDelay(100);
     }
 }
 
