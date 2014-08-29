@@ -295,6 +295,8 @@ $(OBJECT_DIR)/$(TARGET)/%.o): %.S
 	@$(CC) -c -o $@ $(ASFLAGS) $< 
 
 
+all: $(TARGET_ELF) $(TARGET_BIN)
+
 clean:
 	rm -f $(TARGET_HEX) $(TARGET_ELF) $(TARGET_OBJS) $(TARGET_MAP)
 

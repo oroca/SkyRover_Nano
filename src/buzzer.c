@@ -1,6 +1,7 @@
 #include "board.h"
 #include "mw.h"
 
+
 static uint8_t buzzerIsOn = 0, beepDone = 0;
 static uint32_t buzzerLastToggleTime;
 static void beep(uint16_t pulse);
