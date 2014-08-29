@@ -21,21 +21,14 @@ static const motorMixer_t mixerQuadP[] = {
     { 1.0f,  0.0f, -1.0f, -1.0f },          // FRONT
 };
 
-/*
+
 static const motorMixer_t mixerQuadX[] = {
     { 1.0f, -1.0f,  1.0f, -1.0f },          // REAR_R
     { 1.0f, -1.0f, -1.0f,  1.0f },          // FRONT_R
     { 1.0f,  1.0f,  1.0f,  1.0f },          // REAR_L
     { 1.0f,  1.0f, -1.0f, -1.0f },          // FRONT_L
 };
-*/
-//-- iMachine 님 기체로 변경 
-static const motorMixer_t mixerQuadX[] = {
-    { 1.0f, -1.0f,  1.0f,  1.0f },          // REAR_R
-    { 1.0f, -1.0f, -1.0f, -1.0f },          // FRONT_R
-    { 1.0f,  1.0f,  1.0f, -1.0f },          // REAR_L
-    { 1.0f,  1.0f, -1.0f,  1.0f },          // FRONT_L
-};
+
 
 static const motorMixer_t mixerBi[] = {
     { 1.0f,  1.0f,  0.0f,  0.0f },          // LEFT
