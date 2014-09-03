@@ -266,6 +266,18 @@ TARGET_OBJS	 = $(addsuffix .o,$(addprefix $(OBJECT_DIR)/$(TARGET)/,$(basename $(
 TARGET_MAP   = $(OBJECT_DIR)/$(TARGET).map
 
 
+all: create_dir $(TARGET_HEX)
+
+create_dir:
+	@echo "Create $(OBJECT_DIR)/$(TARGET)"
+ifeq ($(ComSpec),)
+	$(shell [ -d $(OBJECT_DIR)/$(TARGET) ] || mkdir -p $(OBJECT_DIR)/$(TARGET))
+else
+	@echo "@md $(OBJECT_DIR)\$(TARGET) >NUL 2>&1"
+	@md obj\$(TARGET) >NUL 2>&1 || echo "" >NUL
+endif
+
+
 # List of buildable ELF files and their object dependencies.
 # It would be nice to compute these lists, but that seems to be just beyond make.
 
@@ -280,17 +292,17 @@ $(TARGET_ELF):  $(TARGET_OBJS)
 
 # Compile
 $(OBJECT_DIR)/$(TARGET)/%.o: %.c
-	@mkdir -p $(dir $@)
+#	@mkdir -p $(dir $@)
 	@echo %% $(notdir $<)
 	@$(CC) -c -o $@ $(CFLAGS) $<
 
 # Assemble
 $(OBJECT_DIR)/$(TARGET)/%.o: %.s
-	@mkdir -p $(dir $@)
+#	@mkdir -p $(dir $@)
 	@echo %% $(notdir $<)
 	@$(CC) -c -o $@ $(ASFLAGS) $< 
 $(OBJECT_DIR)/$(TARGET)/%.o): %.S
-	@mkdir -p $(dir $@)
+#	@mkdir -p $(dir $@)
 	@echo %% $(notdir $<)
 	@$(CC) -c -o $@ $(ASFLAGS) $< 
 
