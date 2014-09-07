@@ -7,7 +7,7 @@
 
 
 
-//-- Thread 관련 함수
+//-- Thread 愿���� ��⑥��
 //
 osThreadId Thread_Loop_Handle, Thread_Serial_Handle;
 
@@ -91,7 +91,7 @@ int main(void)
     serialPort_t* loopbackPort = NULL;
 
 
-    //-- 시스템 초기화 
+    //-- �����ㅽ�� 珥�湲고��
     //
     systemInit();
 
@@ -215,7 +215,6 @@ int main(void)
 
     DEBUG_PRINT("Booting..\r\n");
 
-    Hw_VCom_Init();
 
     // drop out any sensors that don't seem to work, init all the others. halt if gyro is dead.
     sensorsAutodetect();
@@ -244,6 +243,10 @@ int main(void)
     calibratingG = CALIBRATING_GYRO_CYCLES;
     calibratingB = CALIBRATING_BARO_CYCLES;             // 10 seconds init_delay + 200 * 25 ms = 15 seconds before ground pressure settles
     f.SMALL_ANGLES_25 = 1;
+
+    //-- 센서초기화 루틴때문에 USB 통신안되는것 때문에 마지막으로 순서 변경
+    //
+    Hw_VCom_Init();
 
     DEBUG_PRINT("Start\r\n");
 
