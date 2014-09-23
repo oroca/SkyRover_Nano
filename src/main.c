@@ -91,7 +91,7 @@ int main(void)
     serialPort_t* loopbackPort = NULL;
 
 
-    //-- �����ㅽ�� 珥�湲고��
+    //-- 하드웨어 초기화
     //
     systemInit();
 
