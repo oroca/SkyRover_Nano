@@ -247,7 +247,9 @@ void serialInit(uint32_t baudrate)
 {
     int idx;
 
-    core.mainport = uartOpen(USART1, NULL, baudrate, MODE_RXTX);
+    // SKYROVER
+    core.mainport = uartOpen(USART2, NULL, baudrate, MODE_RXTX);
+
 
     // calculate used boxes based on features and fill availableBoxes[] array
     memset(availableBoxes, 0xFF, sizeof(availableBoxes));

@@ -27,7 +27,8 @@
 #define DEBUG_OUT        1
 
 #if DEBUG_OUT == 1
-#define DEBUG_PRINT(x)   serialPrint(core.mainport , x);
+//#define DEBUG_PRINT(x)   serialPrint(core.mainport , x);
+#define DEBUG_PRINT(x)   serialPrint(core.menuport , x);
 #else
 #define DEBUG_PRINT(x)   
 #endif

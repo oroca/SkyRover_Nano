@@ -1,55 +1,8 @@
 #include "board.h"
 #include "mw.h"
-#include "cmsis_os.h"
-
-#include "usb_lib.h"
-#include "usb_pwr.h"
 
 
 
-//-- Thread 愿���� ��⑥��
-//
-osThreadId Thread_Loop_Handle, Thread_Serial_Handle;
-
-
-static void Thread_Loop(void const *argument)
-{
-    uint32_t count = 0;
-    (void) argument;
-
-    DEBUG_PRINT("Thread Loop\r\n");
-
-    for (;;)
-    {
-        loop();
-    }
-}
-
-
-static void Thread_Serial(void const *argument)
-{
-    uint32_t count = 0;
-    (void) argument;
-
-    DEBUG_PRINT("Thread Serial\r\n");
-
-    for (;;)
-    {
-        if( bDeviceState == CONFIGURED )
-        {
-            //Hw_VCom_Putch('u');
-            //Hw_VCom_Putch('s');
-            //Hw_VCom_Putch('b');
-            //Hw_VCom_Putch(' ');
-
-			Hw_VCom_Printf( "Angle : %d\t %d\t %d\t"  , angle[0], angle[1], heading );
-			Hw_VCom_Printf( "rc :\t %d\t %d\t %d\t %d\t \r\n", rcCommand[0], rcCommand[1], rcCommand[2], rcCommand[3] );
-
-
-        }
-        osDelay(100);
-    }
-}
 
 
 
@@ -212,6 +165,7 @@ int main(void)
 
 
     serialInit(mcfg.serial_baudrate);
+    core.menuport = uartOpen(USART1, NULL, 115200, MODE_RXTX);
 
     DEBUG_PRINT("Booting..\r\n");
 
@@ -250,21 +204,9 @@ int main(void)
 
     DEBUG_PRINT("Start\r\n");
 
-
-    //-- Thread 1 definition
+    //-- thread 시작
     //
-    osThreadDef(TASK1, Thread_Loop  , osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
-    osThreadDef(TASK2, Thread_Serial, osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
-
-    //-- Start thread
-    //
-    Thread_Loop_Handle   = osThreadCreate(osThread(TASK1), NULL);
-    Thread_Serial_Handle = osThreadCreate(osThread(TASK2), NULL);
-
-    //-- Start scheduler
-    //
-    osKernelStart(NULL, NULL);
-
+    thread_main();
 
     while(1)
     {

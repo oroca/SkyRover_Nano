@@ -80,7 +80,8 @@ COMMON_SRC	 = startup_stm32f10x_md_gcc.s \
 		   $(RTOS_2_SRC) \
 		   $(RTOS_3_SRC) \
 		   $(USB_1_SRC)  \
-		   $(USB_2_SRC)  
+		   $(USB_2_SRC)	 \
+		   $(THREAD_SRC)  
 
 
 # Source files for the NAZE target
@@ -181,6 +182,10 @@ USB_1_SRC	 = $(notdir $(wildcard $(LIB_DIR)/STM32_USB-FS-Device_Driver/src/*.c))
 VPATH		:= $(VPATH):$(LIB_DIR)/USB_Port
 USB_2_SRC	 = $(notdir $(wildcard $(LIB_DIR)/USB_Port/*.c))
 
+# Search path and source files for thread
+VPATH		:= $(VPATH):$(SRC_DIR)/thread
+THREAD_SRC	 = $(notdir $(wildcard $(SRC_DIR)/thread/*.c))
+
 
 
 ###############################################################################
@@ -203,6 +208,7 @@ INCLUDE_DIRS	 = $(SRC_DIR) \
 		   $(RTOS_DIR)/Source/portable/GCC/ARM_CM3 \
 		   $(LIB_DIR)/STM32_USB-FS-Device_Driver/inc \
 		   $(LIB_DIR)/USB_Port \
+		   $(SRC_DIR)/thread \
 
 
 
