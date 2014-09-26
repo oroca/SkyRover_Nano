@@ -21,6 +21,12 @@
 #include "thread_main.h"
 #include "thread_mw.h"
 #include "thread_menu.h"
+#include "mw.h"
+
+
+//-- 외부
+//
+extern core_t core;
 
 
 //-- 내부 선언
@@ -42,7 +48,9 @@ osThreadId Thread_Handle_menu;
 
 
 
-
+//-- IP
+//
+osMutexDef(MUTEX1);
 
 
 /*---------------------------------------------------------------------------
@@ -53,19 +61,29 @@ osThreadId Thread_Handle_menu;
 ---------------------------------------------------------------------------*/
 void thread_main(void)
 {
+
+
+	Mutex_Loop = osMutexCreate( osMutex(MUTEX1) );
+
+	if( Mutex_Loop == NULL ) DEBUG_PRINT("Mutex Fail\r\n");
+
+
     //-- Thread 1 definition
     //
     osThreadDef(TASK1, thread_mw  , osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
     osThreadDef(TASK2, thread_menu, osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
+
 
     //-- Start thread
     //
     Thread_Handle_mw   = osThreadCreate(osThread(TASK1), NULL);
     Thread_Handle_menu = osThreadCreate(osThread(TASK2), NULL);
 
+
     //-- Start scheduler
     //
     osKernelStart(NULL, NULL);
+
 
     while(1);
 }

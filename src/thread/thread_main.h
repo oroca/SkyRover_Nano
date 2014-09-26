@@ -33,6 +33,9 @@
 #endif
 
 
+EXT_THREAD_MAIN_DEF osMutexId Mutex_Loop;
+
+
 EXT_THREAD_MAIN_DEF void thread_main(void);
 
 #endif

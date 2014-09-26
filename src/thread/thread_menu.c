@@ -33,18 +33,16 @@ extern core_t core;
 
 //-- 내부 선언
 //
-/*
+
+
+#if _DEF_MENU_PORT == PORT_USB
+
 #define _menu_received		Hw_VCom_IsReceived
 #define _menu_getch			Hw_VCom_Getch
 #define _menu_putch			Hw_VCom_Putch
 #define _menu_printf		Hw_VCom_Printf
-*/
 
-//#define _menu_received		Hw_VCom_IsReceived
-//#define _menu_getch			Hw_VCom_Getch
-//#define _menu_putch			Hw_VCom_Putch
-//#define _menu_printf		tfp_printf
-
+#else
 
 uint8_t _menu_received(void)
 {
@@ -75,6 +73,9 @@ void _menu_printf( char *format, ... )
     tfp_format(NULL, _menu_putc, format, va);
     va_end(va);
 }
+
+#endif
+
 
 
 //-- 내부 변수
@@ -187,8 +188,12 @@ void thread_menu(void const *argument)
     		switch( cmd )
     		{
 				case '1':
-					_menu_printf( "Angle : %d\t %d\t %d\t"  , angle[0], angle[1], heading );
-					_menu_printf( "rc :\t %d\t %d\t %d\t %d\t \r\n", rcCommand[0], rcCommand[1], rcCommand[2], rcCommand[3] );
+					while( !_menu_received() )
+					{
+						_menu_printf( "Angle : %d\t %d\t %d\t"  , angle[0], angle[1], heading );
+						_menu_printf( "rc :\t %d\t %d\t %d\t %d\t \r\n", rcCommand[0], rcCommand[1], rcCommand[2], rcCommand[3] );
+						osDelay(100);
+					}
 					break;
 
 				case '2':
@@ -229,14 +234,26 @@ void cmd_bluetooth_setup( void )
 {
 	uint32_t time_out;
 	uint8_t  ch;
+	osStatus ret;
 
 
-	_menu_printf("Uart2 Open 9600BPS \r\n");
+	//-- MW의 메인 Loop를 중지 시킨다.
+	//
+	ret = osMutexWait( Mutex_Loop, 1000 );
+
+	if( ret != osOK )
+	{
+		_menu_printf("Fail to osMutexWait\r\n");
+		return;
+	}
+
+
+	_menu_printf("\r\nUart2 Open 9600BPS \r\n");
 
 	core.blueport = uartOpen(USART2, NULL, 9600, MODE_RXTX);
 
 
-	_menu_printf("\r\nSned AT\r\n");
+	_menu_printf("\r\nAT -> ");
 	serialPrint(core.blueport, "AT");
 
 
@@ -253,7 +270,7 @@ void cmd_bluetooth_setup( void )
 	}
 
 
-	_menu_printf("\r\nSned AT+BAUD4\r\n");
+	_menu_printf("\r\nAT+BAUD4 -> ");
 	serialPrint(core.blueport, "AT+BAUD4");
 
 
@@ -269,7 +286,7 @@ void cmd_bluetooth_setup( void )
 		osDelay(1);
 	}
 
-	_menu_printf("\r\nSned AT+RESET\r\n");
+	_menu_printf("\r\nAT+RESET -> ");
 	serialPrint(core.blueport, "AT+RESET");
 
 
@@ -285,9 +302,11 @@ void cmd_bluetooth_setup( void )
 		osDelay(1);
 	}
 
+	_menu_printf("\r\n");
 
 	serialInit(mcfg.serial_baudrate);
 
+	osMutexRelease( Mutex_Loop );
 }
 
 
@@ -306,12 +325,20 @@ void cmd_bluetooth_check( void )
 	uint8_t  ch;
 	uint8_t  ch_array[2];
 	uint8_t  ch_i;
+	osStatus ret;
 
+	ret = osMutexWait( Mutex_Loop, 1000 );
+
+	if( ret != osOK )
+	{
+		_menu_printf("Fail to osMutexWait\r\n");
+		return;
+	}
 
 	core.blueport = uartOpen(USART2, NULL, 115200, MODE_RXTX);
 
-
-	_menu_printf("\r\rnSned AT\r\n");
+	_menu_printf("\r\n");
+	_menu_printf("AT -> ");
 
 	serialPrint(core.blueport, "AT");
 
@@ -336,15 +363,19 @@ void cmd_bluetooth_check( void )
 		osDelay(1);
 	}
 
+
 	if( ch_array[0] == 'O' && ch_array[1] == 'K' )
 	{
-		_menu_printf("\r\rnReceived OK\r\n");
+		_menu_printf("\r\nBluetooth OK");
 	}
 	else
 	{
-		_menu_printf("\r\rnReceived Fail\r\n");
+		_menu_printf("\r\nBluetooth Fail");
 	}
+
+	_menu_printf("\r\n");
 
 	serialInit(mcfg.serial_baudrate);
 
+	osMutexRelease( Mutex_Loop );
 }

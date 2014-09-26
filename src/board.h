@@ -23,12 +23,26 @@
 #include "drv_system.h"         // timers, delays, etc
 #include "drv_gpio.h"
 
+#define PORT_UART1				1
+#define PORT_USB				2
 
-#define DEBUG_OUT        1
 
-#if DEBUG_OUT == 1
-//#define DEBUG_PRINT(x)   serialPrint(core.mainport , x);
-#define DEBUG_PRINT(x)   serialPrint(core.menuport , x);
+
+#define _DEF_DEBUG_OUT        	1
+#define _DEF_MENU_PORT			PORT_UART1
+//#define _DEF_MENU_PORT			PORT_USB
+
+
+
+#if _DEF_MENU_PORT == PORT_UART1
+#define _DEF_MW_PORT			PORT_UART2
+#else
+#define _DEF_MW_PORT			PORT_UART1
+#endif
+
+
+#if _DEF_DEBUG_OUT == 1
+#define DEBUG_PRINT(x)   serialPrint(core.debugport , x);
 #else
 #define DEBUG_PRINT(x)   
 #endif

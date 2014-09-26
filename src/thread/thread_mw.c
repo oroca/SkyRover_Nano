@@ -55,11 +55,19 @@ void thread_mw(void const *argument)
 {
     uint32_t count = 0;
     (void) argument;
+    osStatus ret;
 
     DEBUG_PRINT("Thread multiwii\r\n");
 
+
     for (;;)
     {
-        loop();
+    	ret = osMutexWait( Mutex_Loop, 10 );
+
+    	if( ret == osOK )
+    	{
+    		loop();
+            osMutexRelease( Mutex_Loop );
+    	}
     }
 }
