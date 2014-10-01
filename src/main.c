@@ -1,6 +1,6 @@
 #include "board.h"
 #include "mw.h"
-
+#include "thread_main.h"
 
 
 
@@ -174,7 +174,7 @@ int main(void)
 	core.debugport = core.menuport;
 	#endif
 
-    DEBUG_PRINT("Booting.. V140926R1\r\n");
+    DEBUG_PRINT("Booting.. V141001R1\r\n");
 
 
     // drop out any sensors that don't seem to work, init all the others. halt if gyro is dead.
