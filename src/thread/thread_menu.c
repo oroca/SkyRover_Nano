@@ -28,8 +28,8 @@
 
 //-- 외부
 //
-extern core_t core;
-
+extern core_t  core;
+extern uint8_t vbat;
 
 //-- 내부 선언
 //
@@ -89,6 +89,30 @@ void cmd_bluetooth_setup( void );
 void cmd_bluetooth_check( void );
 
 
+
+
+
+static void _menu_show_vbat(void)
+{
+	_menu_printf(" Vbat: %d.%dV",vbat/10, vbat%10);
+}
+
+
+static void _menu_show_uart1_type(void)
+{
+	//-- Uart1 포트 설정값 표시
+	//
+	if      ( mcfg.uart1_type == _UART1_TYPE_NONE )	_menu_printf("None     \n\r");
+	else if ( mcfg.uart1_type == _UART1_TYPE_MW   )	_menu_printf("MultiWii \n\r");
+	else if ( mcfg.uart1_type == _UART1_TYPE_LCD  )	_menu_printf("LCD      \n\r");
+	else
+	{
+		_menu_printf("None     \n\r");
+	}
+}
+
+
+
 /*---------------------------------------------------------------------------
      TITLE   : _menu_show_menu
      WORK    :
@@ -97,22 +121,23 @@ void cmd_bluetooth_check( void );
 ---------------------------------------------------------------------------*/
 static void _menu_show_menu(void)
 {
-	u8 key;
 
 	_menu_printf("\n\r\n\r");
 	_menu_printf("*******************************************************\n\r");
-	_menu_printf("                 SkyRover Nano V0.1                    \n\r");
+	_menu_printf("         SkyRover Nano ");
+	_menu_printf(_SKYROVER_VER_STR_); _menu_show_vbat();
+	_menu_printf("\r\n");
 	_menu_printf("*******************************************************\n\r");
-	_menu_printf("* 1. Sensor Status                                    *\n\r");
-	_menu_printf("* 2. Bluetooth Setup                                  *\n\r");
-	_menu_printf("* 3. Bluetooth Check                                  *\n\r");
-	_menu_printf("* 4.                                                  *\n\r");
-	_menu_printf("* 5.                                                  *\n\r");
-	_menu_printf("* 6.                                                  *\n\r");
-	_menu_printf("* 7.                                                  *\n\r");
-	_menu_printf("* 8.                                                  *\n\r");
-	_menu_printf("* 9.                                                  *\n\r");
-	_menu_printf("* m.  Menu                                            *\n\r");
+	_menu_printf("  1. Sensor Status                                     \n\r");
+	_menu_printf("  2. Bluetooth Setup                                   \n\r");
+	_menu_printf("  3. Bluetooth Check                                   \n\r");
+	_menu_printf("  4. Uart1 : "); _menu_show_uart1_type();
+	_menu_printf("  5.                                                   \n\r");
+	_menu_printf("  6.                                                   \n\r");
+	_menu_printf("  7.                                                   \n\r");
+	_menu_printf("  8.                                                   \n\r");
+	_menu_printf("  9.                                                   \n\r");
+	_menu_printf("  m.  Menu                                             \n\r");
 	_menu_printf("*******************************************************\n\r");
 	_menu_printf("\n\r");
 }
@@ -171,6 +196,7 @@ void thread_menu(void const *argument)
 {
     (void) argument;
     uint8_t cmd;
+    uint8_t show_menu_flag;
 
     DEBUG_PRINT("Thread Menu\r\n");
 
@@ -184,6 +210,7 @@ void thread_menu(void const *argument)
     	//if( bDeviceState == CONFIGURED && _menu_get_cmd( &cmd ) == TRUE )
     	if( _menu_get_cmd( &cmd ) == TRUE )
         {
+    		show_menu_flag = false;
 
     		switch( cmd )
     		{
@@ -204,6 +231,16 @@ void thread_menu(void const *argument)
 					cmd_bluetooth_check();
 					break;
 
+				case '4':
+					mcfg.uart1_type++;
+
+					if( mcfg.uart1_type > _UART1_TYPE_END ) mcfg.uart1_type = 0;
+					writeEEPROM(1, true);
+
+					_menu_printf( "the board should be rebooted\r\n" );
+					show_menu_flag = true;
+					break;
+
 				case 'm':
 				case 'M':
 					_menu_show_menu();
@@ -213,6 +250,12 @@ void thread_menu(void const *argument)
 				default:
 					break;
 
+    		}
+
+    		if( show_menu_flag == true )
+    		{
+				_menu_show_menu();
+				_menu_show_cmd();
     		}
 
         }

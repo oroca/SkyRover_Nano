@@ -23,22 +23,20 @@
 #include "drv_system.h"         // timers, delays, etc
 #include "drv_gpio.h"
 
+
+#define _SKYROVER_VER_STR_  	"V141003R1"
+
+
 #define PORT_UART1				1
 #define PORT_USB				2
 
 
 
 #define _DEF_DEBUG_OUT        	1
-#define _DEF_MENU_PORT			PORT_UART1
-//#define _DEF_MENU_PORT			PORT_USB
+//#define _DEF_MENU_PORT			PORT_UART1
+#define _DEF_MENU_PORT			PORT_USB
 
 
-
-#if _DEF_MENU_PORT == PORT_UART1
-#define _DEF_MW_PORT			PORT_UART2
-#else
-#define _DEF_MW_PORT			PORT_UART1
-#endif
 
 
 #if _DEF_DEBUG_OUT == 1
@@ -46,6 +44,13 @@
 #else
 #define DEBUG_PRINT(x)   
 #endif
+
+
+
+#define _UART1_TYPE_NONE		0
+#define _UART1_TYPE_MW			1
+#define _UART1_TYPE_LCD			2
+#define _UART1_TYPE_END			2
 
 
 

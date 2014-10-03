@@ -286,6 +286,10 @@ typedef struct master_t {
     config_t profile[3];                    // 3 separate profiles
     uint8_t current_profile;                // currently loaded profile
 
+
+    // SkyRover용 변수 추가
+    uint8_t	uart1_type;						// 0:mw, 1:lcd
+
     uint8_t magic_ef;                       // magic number, should be 0xEF
     uint8_t chk;                            // XOR checksum
 } master_t;

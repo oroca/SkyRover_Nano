@@ -247,11 +247,15 @@ void serialInit(uint32_t baudrate)
 {
     int idx;
 
-	#if _DEF_MW_PORT == PORT_UART1
-    core.mainport  = uartOpen(USART1, NULL, baudrate, MODE_RXTX);
-	#else
-    core.mainport  = uartOpen(USART2, NULL, baudrate, MODE_RXTX);
-	#endif
+
+    if( mcfg.uart1_type == _UART1_TYPE_MW )
+    {
+        core.mainport  = uartOpen(USART1, NULL, baudrate, MODE_RXTX);
+    }
+    else
+    {
+    	core.mainport  = uartOpen(USART2, NULL, baudrate, MODE_RXTX);
+    }
 
 
     // calculate used boxes based on features and fill availableBoxes[] array

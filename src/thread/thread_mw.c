@@ -53,7 +53,6 @@ extern core_t core;
 ---------------------------------------------------------------------------*/
 void thread_mw(void const *argument)
 {
-    uint32_t count = 0;
     (void) argument;
     osStatus ret;
 

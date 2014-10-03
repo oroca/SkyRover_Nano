@@ -166,15 +166,20 @@ int main(void)
 
     serialInit(mcfg.serial_baudrate);
 
-	#if _DEF_MW_PORT == PORT_UART1
-	core.menuport  = uartOpen(USART1, NULL, mcfg.serial_baudrate, MODE_RXTX);
-	core.debugport = core.menuport;
-	#else
-	core.menuport  = uartOpen(USART1, NULL, mcfg.serial_baudrate, MODE_RXTX);
-	core.debugport = core.menuport;
-	#endif
+	if( mcfg.uart1_type != _UART1_TYPE_MW )
+	{
+		core.menuport  = uartOpen(USART1, NULL, mcfg.serial_baudrate, MODE_RXTX);
+		core.debugport = core.menuport;
+	}
+	else
+	{
+		core.debugport = core.mainport;
+	}
 
-    DEBUG_PRINT("Booting.. V141001R1\r\n");
+
+    DEBUG_PRINT("Booting.. ");
+    DEBUG_PRINT(_SKYROVER_VER_STR_);
+    DEBUG_PRINT("\r\n");
 
 
     // drop out any sensors that don't seem to work, init all the others. halt if gyro is dead.

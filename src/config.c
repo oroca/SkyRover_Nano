@@ -175,9 +175,9 @@ static void resetConf(void)
     //mcfg.mixerConfiguration = MULTITYPE_QUADX;  // 쿼드콥터
     featureClearAll();    
     
-    featureSet(FEATURE_SERIALRX);       // 시리얼포트로 HexAirBot 인터페이스 수신을 위해 
+    featureSet(FEATURE_SERIALRX);       // 시리얼포트로 HexAirBot 인터페이스 수신을 위해
     featureSet(FEATURE_MOTOR_STOP);     // DC Brushed 모터 사용시 모터 정지시 PWM값을 0으로 하기 위해
-
+    featureSet(FEATURE_VBAT);			// 배터리 전압체크 기능 활성화
 
     // global settings
     mcfg.current_profile = 0;       // default profile
@@ -197,7 +197,7 @@ static void resetConf(void)
     mcfg.max_angle_inclination = 500;    // 50 degrees
     mcfg.yaw_control_direction = 1;
     mcfg.moron_threshold = 32;
-    mcfg.vbatscale = 110;
+    mcfg.vbatscale = 20;				// SkyRover는 저항비가 2:1임으로 110->20로 변
     mcfg.vbatmaxcellvoltage = 43;
     mcfg.vbatmincellvoltage = 33;
     mcfg.power_adc_channel = 0;
@@ -232,6 +232,9 @@ static void resetConf(void)
     mcfg.softserial_inverted = 0;
     mcfg.looptime = 3500;
     mcfg.rssi_aux_channel = 0;
+
+    // SkyRover Setting
+    mcfg.uart1_type = _UART1_TYPE_NONE;	// Uart1을 멀티위 통신포트로 설정
 
     cfg.pidController = 0;
     cfg.P8[ROLL] = 40;
@@ -272,7 +275,7 @@ static void resetConf(void)
     // for (i = 0; i < CHECKBOXITEMS; i++)
     //     cfg.activate[i] = 0;
 
-    //-- Angle모드를 디폴트로 활성화 
+    //-- Angle모드를 디폴트로 활성화
     cfg.activate[BOXANGLE] = 1;
 
     cfg.angleTrim[0] = 0;
