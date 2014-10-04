@@ -24,6 +24,7 @@
 #include "usb_lib.h"
 #include "usb_pwr.h"
 
+#include "drv_u8g.h"
 
 
 //-- 외부
@@ -197,6 +198,7 @@ void thread_menu(void const *argument)
     (void) argument;
     uint8_t cmd;
     uint8_t show_menu_flag;
+    uint8_t pos = 0;
 
     DEBUG_PRINT("Thread Menu\r\n");
 
@@ -239,6 +241,9 @@ void thread_menu(void const *argument)
 
 					_menu_printf( "the board should be rebooted\r\n" );
 					show_menu_flag = true;
+					break;
+
+				case '5':
 					break;
 
 				case 'm':

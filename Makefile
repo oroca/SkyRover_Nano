@@ -45,6 +45,7 @@ STDPERIPH_DIR	 = $(ROOT)/lib/STM32F10x_StdPeriph_Driver
 OBJECT_DIR	 = $(ROOT)/obj
 BIN_DIR		 = $(ROOT)/obj
 RTOS_DIR	 = $(ROOT)/lib/FreeRTOS
+U8GLIB_DIR	 = $(ROOT)/lib/u8glib
 
 
 # Source files common to all targets
@@ -72,6 +73,7 @@ COMMON_SRC	 = startup_stm32f10x_md_gcc.s \
 		   drv_uart.c \
 		   drv_vcom.c \
 		   drv_vcom_q.c \
+		   drv_u8g.c \
 		   printf.c \
 		   utils.c \
 		   $(CMSIS_SRC) \
@@ -81,7 +83,8 @@ COMMON_SRC	 = startup_stm32f10x_md_gcc.s \
 		   $(RTOS_3_SRC) \
 		   $(USB_1_SRC)  \
 		   $(USB_2_SRC)	 \
-		   $(THREAD_SRC)  
+		   $(THREAD_SRC) \
+		   $(U8GLIB_SRC) 
 
 
 # Source files for the NAZE target
@@ -186,6 +189,9 @@ USB_2_SRC	 = $(notdir $(wildcard $(LIB_DIR)/USB_Port/*.c))
 VPATH		:= $(VPATH):$(SRC_DIR)/thread
 THREAD_SRC	 = $(notdir $(wildcard $(SRC_DIR)/thread/*.c))
 
+# Search path and source files for u8glib
+VPATH		:= $(VPATH):$(U8GLIB_DIR)/src
+U8GLIB_SRC	 = $(notdir $(wildcard $(U8GLIB_DIR)/src/*.c))
 
 
 ###############################################################################
@@ -209,6 +215,7 @@ INCLUDE_DIRS	 = $(SRC_DIR) \
 		   $(LIB_DIR)/STM32_USB-FS-Device_Driver/inc \
 		   $(LIB_DIR)/USB_Port \
 		   $(SRC_DIR)/thread \
+		   $(U8GLIB_DIR)/src \
 
 
 

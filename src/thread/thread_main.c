@@ -21,6 +21,7 @@
 #include "thread_main.h"
 #include "thread_mw.h"
 #include "thread_menu.h"
+#include "thread_lcd.h"
 #include "mw.h"
 
 
@@ -40,6 +41,8 @@ extern core_t core;
 //
 osThreadId Thread_Handle_mw;
 osThreadId Thread_Handle_menu;
+osThreadId Thread_Handle_lcd;
+
 
 
 //-- 내부 함수
@@ -72,12 +75,16 @@ void thread_main(void)
     //
     osThreadDef(TASK1, thread_mw  , osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
     osThreadDef(TASK2, thread_menu, osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
+    osThreadDef(TASK3, thread_lcd,  osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
+
 
 
     //-- Start thread
     //
     Thread_Handle_mw   = osThreadCreate(osThread(TASK1), NULL);
     Thread_Handle_menu = osThreadCreate(osThread(TASK2), NULL);
+    Thread_Handle_lcd  = osThreadCreate(osThread(TASK3), NULL);
+
 
 
     //-- Start scheduler
