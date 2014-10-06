@@ -5187,7 +5187,7 @@ LOAD /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib
                 0x0000000008003000                g_pfnVectors
                 0x000000000800310c                . = ALIGN (0x4)
 
-.text           0x0000000008003110    0x1799c
+.text           0x0000000008003110    0x17a04
                 0x0000000008003110                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008003110       0x54 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
@@ -6731,544 +6731,548 @@ LOAD /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib
                 0x00000000080125bc       0x90 obj/SKYROVER/thread_main.o
                 0x00000000080125bc                thread_main
  .text._menu_show_menu
-                0x000000000801264c      0x100 obj/SKYROVER/thread_menu.o
+                0x000000000801264c      0x108 obj/SKYROVER/thread_menu.o
+ .text.cmd_go_bootloader
+                0x0000000008012754       0x18 obj/SKYROVER/thread_menu.o
+                0x0000000008012754                cmd_go_bootloader
  .text.cmd_bluetooth_setup
-                0x000000000801274c      0x118 obj/SKYROVER/thread_menu.o
-                0x000000000801274c                cmd_bluetooth_setup
+                0x000000000801276c      0x118 obj/SKYROVER/thread_menu.o
+                0x000000000801276c                cmd_bluetooth_setup
  .text.cmd_bluetooth_check
-                0x0000000008012864       0xe4 obj/SKYROVER/thread_menu.o
-                0x0000000008012864                cmd_bluetooth_check
+                0x0000000008012884       0xe4 obj/SKYROVER/thread_menu.o
+                0x0000000008012884                cmd_bluetooth_check
  .text.thread_menu
-                0x0000000008012948       0xe4 obj/SKYROVER/thread_menu.o
-                0x0000000008012948                thread_menu
+                0x0000000008012968       0xf0 obj/SKYROVER/thread_menu.o
+                0x0000000008012968                thread_menu
  .text.thread_mw
-                0x0000000008012a2c       0x34 obj/SKYROVER/thread_mw.o
-                0x0000000008012a2c                thread_mw
+                0x0000000008012a58       0x34 obj/SKYROVER/thread_mw.o
+                0x0000000008012a58                thread_mw
  .text.u8g_DrawHBitmap
-                0x0000000008012a60       0x34 obj/SKYROVER/u8g_bitmap.o
-                0x0000000008012a60                u8g_DrawHBitmap
+                0x0000000008012a8c       0x34 obj/SKYROVER/u8g_bitmap.o
+                0x0000000008012a8c                u8g_DrawHBitmap
  .text.u8g_DrawBitmap
-                0x0000000008012a94       0x46 obj/SKYROVER/u8g_bitmap.o
-                0x0000000008012a94                u8g_DrawBitmap
+                0x0000000008012ac0       0x46 obj/SKYROVER/u8g_bitmap.o
+                0x0000000008012ac0                u8g_DrawBitmap
  .text.u8g_IsBBXIntersection
-                0x0000000008012ada       0x56 obj/SKYROVER/u8g_clip.o
-                0x0000000008012ada                u8g_IsBBXIntersection
+                0x0000000008012b06       0x56 obj/SKYROVER/u8g_clip.o
+                0x0000000008012b06                u8g_IsBBXIntersection
  .text.u8g_InitCom
-                0x0000000008012b30        0xc obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b30                u8g_InitCom
+                0x0000000008012b5c        0xc obj/SKYROVER/u8g_com_api.o
+                0x0000000008012b5c                u8g_InitCom
  .text.u8g_SetChipSelect
-                0x0000000008012b3c        0xc obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b3c                u8g_SetChipSelect
+                0x0000000008012b68        0xc obj/SKYROVER/u8g_com_api.o
+                0x0000000008012b68                u8g_SetChipSelect
  .text.u8g_SetResetLow
-                0x0000000008012b48        0xe obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b48                u8g_SetResetLow
+                0x0000000008012b74        0xe obj/SKYROVER/u8g_com_api.o
+                0x0000000008012b74                u8g_SetResetLow
  .text.u8g_SetResetHigh
-                0x0000000008012b56        0xe obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b56                u8g_SetResetHigh
+                0x0000000008012b82        0xe obj/SKYROVER/u8g_com_api.o
+                0x0000000008012b82                u8g_SetResetHigh
  .text.u8g_SetAddress
-                0x0000000008012b64        0xc obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b64                u8g_SetAddress
+                0x0000000008012b90        0xc obj/SKYROVER/u8g_com_api.o
+                0x0000000008012b90                u8g_SetAddress
  .text.u8g_WriteByte
-                0x0000000008012b70        0xc obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b70                u8g_WriteByte
+                0x0000000008012b9c        0xc obj/SKYROVER/u8g_com_api.o
+                0x0000000008012b9c                u8g_WriteByte
  .text.u8g_WriteSequence
-                0x0000000008012b7c        0xa obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b7c                u8g_WriteSequence
+                0x0000000008012ba8        0xa obj/SKYROVER/u8g_com_api.o
+                0x0000000008012ba8                u8g_WriteSequence
  .text.u8g_WriteEscSeqP
-                0x0000000008012b86       0x94 obj/SKYROVER/u8g_com_api.o
-                0x0000000008012b86                u8g_WriteEscSeqP
+                0x0000000008012bb2       0x94 obj/SKYROVER/u8g_com_api.o
+                0x0000000008012bb2                u8g_WriteEscSeqP
  .text.u8g_com_null_fn
-                0x0000000008012c1a        0x4 obj/SKYROVER/u8g_com_null.o
-                0x0000000008012c1a                u8g_com_null_fn
- *fill*         0x0000000008012c1e        0x2 
+                0x0000000008012c46        0x4 obj/SKYROVER/u8g_com_null.o
+                0x0000000008012c46                u8g_com_null_fn
+ *fill*         0x0000000008012c4a        0x2 
  .text.u8g_dev_ssd1306_128x64_fn
-                0x0000000008012c20       0xa0 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
-                0x0000000008012c20                u8g_dev_ssd1306_128x64_fn
+                0x0000000008012c4c       0xa0 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
+                0x0000000008012c4c                u8g_dev_ssd1306_128x64_fn
  .text.u8g_font_get_word
-                0x0000000008012cc0        0xe obj/SKYROVER/u8g_font.o
+                0x0000000008012cec        0xe obj/SKYROVER/u8g_font.o
  .text.u8g_font_calc_vref_font
-                0x0000000008012cce        0x4 obj/SKYROVER/u8g_font.o
-                0x0000000008012cce                u8g_font_calc_vref_font
+                0x0000000008012cfa        0x4 obj/SKYROVER/u8g_font.o
+                0x0000000008012cfa                u8g_font_calc_vref_font
  .text.u8g_font_calc_vref_top
-                0x0000000008012cd2        0xa obj/SKYROVER/u8g_font.o
-                0x0000000008012cd2                u8g_font_calc_vref_top
+                0x0000000008012cfe        0xa obj/SKYROVER/u8g_font.o
+                0x0000000008012cfe                u8g_font_calc_vref_top
  .text.u8g_font_GetFormat.isra.0
-                0x0000000008012cdc        0x2 obj/SKYROVER/u8g_font.o
+                0x0000000008012d08        0x2 obj/SKYROVER/u8g_font.o
  .text.u8g_font_GetFontGlyphStructureSize.isra.1
-                0x0000000008012cde       0x14 obj/SKYROVER/u8g_font.o
+                0x0000000008012d0a       0x14 obj/SKYROVER/u8g_font.o
  .text.u8g_font_GetEncoding65Pos
-                0x0000000008012cf2        0x6 obj/SKYROVER/u8g_font.o
-                0x0000000008012cf2                u8g_font_GetEncoding65Pos
+                0x0000000008012d1e        0x6 obj/SKYROVER/u8g_font.o
+                0x0000000008012d1e                u8g_font_GetEncoding65Pos
  .text.u8g_font_GetEncoding97Pos
-                0x0000000008012cf8        0x6 obj/SKYROVER/u8g_font.o
-                0x0000000008012cf8                u8g_font_GetEncoding97Pos
+                0x0000000008012d24        0x6 obj/SKYROVER/u8g_font.o
+                0x0000000008012d24                u8g_font_GetEncoding97Pos
  .text.u8g_font_GetFontStartEncoding
-                0x0000000008012cfe        0x4 obj/SKYROVER/u8g_font.o
-                0x0000000008012cfe                u8g_font_GetFontStartEncoding
+                0x0000000008012d2a        0x4 obj/SKYROVER/u8g_font.o
+                0x0000000008012d2a                u8g_font_GetFontStartEncoding
  .text.u8g_font_GetFontEndEncoding
-                0x0000000008012d02        0x4 obj/SKYROVER/u8g_font.o
-                0x0000000008012d02                u8g_font_GetFontEndEncoding
+                0x0000000008012d2e        0x4 obj/SKYROVER/u8g_font.o
+                0x0000000008012d2e                u8g_font_GetFontEndEncoding
  .text.u8g_GetGlyph
-                0x0000000008012d06       0xe4 obj/SKYROVER/u8g_font.o
-                0x0000000008012d06                u8g_GetGlyph
+                0x0000000008012d32       0xe4 obj/SKYROVER/u8g_font.o
+                0x0000000008012d32                u8g_GetGlyph
  .text.u8g_draw_glyph
-                0x0000000008012dea       0xac obj/SKYROVER/u8g_font.o
-                0x0000000008012dea                u8g_draw_glyph
+                0x0000000008012e16       0xac obj/SKYROVER/u8g_font.o
+                0x0000000008012e16                u8g_draw_glyph
  .text.u8g_DrawStr
-                0x0000000008012e96       0x3c obj/SKYROVER/u8g_font.o
-                0x0000000008012e96                u8g_DrawStr
+                0x0000000008012ec2       0x3c obj/SKYROVER/u8g_font.o
+                0x0000000008012ec2                u8g_DrawStr
  .text.u8g_UpdateRefHeight
-                0x0000000008012ed2       0x4e obj/SKYROVER/u8g_font.o
-                0x0000000008012ed2                u8g_UpdateRefHeight
+                0x0000000008012efe       0x4e obj/SKYROVER/u8g_font.o
+                0x0000000008012efe                u8g_UpdateRefHeight
  .text.u8g_SetFontPosBaseline
-                0x0000000008012f20        0xc obj/SKYROVER/u8g_font.o
-                0x0000000008012f20                u8g_SetFontPosBaseline
+                0x0000000008012f4c        0xc obj/SKYROVER/u8g_font.o
+                0x0000000008012f4c                u8g_SetFontPosBaseline
  .text.u8g_SetFontPosTop
-                0x0000000008012f2c        0xc obj/SKYROVER/u8g_font.o
-                0x0000000008012f2c                u8g_SetFontPosTop
+                0x0000000008012f58        0xc obj/SKYROVER/u8g_font.o
+                0x0000000008012f58                u8g_SetFontPosTop
  .text.u8g_GetStrWidth
-                0x0000000008012f38       0x20 obj/SKYROVER/u8g_font.o
-                0x0000000008012f38                u8g_GetStrWidth
+                0x0000000008012f64       0x20 obj/SKYROVER/u8g_font.o
+                0x0000000008012f64                u8g_GetStrWidth
  .text.u8g_SetFont
-                0x0000000008012f58       0x1c obj/SKYROVER/u8g_font.o
-                0x0000000008012f58                u8g_SetFont
+                0x0000000008012f84       0x1c obj/SKYROVER/u8g_font.o
+                0x0000000008012f84                u8g_SetFont
  .text.u8g_call_dev_fn
-                0x0000000008012f74        0x8 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008012f74                u8g_call_dev_fn
+                0x0000000008012fa0        0x8 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008012fa0                u8g_call_dev_fn
  .text.u8g_InitLL
-                0x0000000008012f7c       0x2a obj/SKYROVER/u8g_ll_api.o
-                0x0000000008012f7c                u8g_InitLL
+                0x0000000008012fa8       0x2a obj/SKYROVER/u8g_ll_api.o
+                0x0000000008012fa8                u8g_InitLL
  .text.u8g_FirstPageLL
-                0x0000000008012fa6       0x34 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008012fa6                u8g_FirstPageLL
+                0x0000000008012fd2       0x34 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008012fd2                u8g_FirstPageLL
  .text.u8g_NextPageLL
-                0x0000000008012fda       0x3a obj/SKYROVER/u8g_ll_api.o
-                0x0000000008012fda                u8g_NextPageLL
+                0x0000000008013006       0x3a obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013006                u8g_NextPageLL
  .text.u8g_GetWidthLL
-                0x0000000008013014       0x16 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008013014                u8g_GetWidthLL
+                0x0000000008013040       0x16 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013040                u8g_GetWidthLL
  .text.u8g_GetHeightLL
-                0x000000000801302a       0x16 obj/SKYROVER/u8g_ll_api.o
-                0x000000000801302a                u8g_GetHeightLL
+                0x0000000008013056       0x16 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013056                u8g_GetHeightLL
  .text.u8g_GetModeLL
-                0x0000000008013040        0x8 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008013040                u8g_GetModeLL
+                0x000000000801306c        0x8 obj/SKYROVER/u8g_ll_api.o
+                0x000000000801306c                u8g_GetModeLL
  .text.u8g_UpdateDimension
-                0x0000000008013048       0x32 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008013048                u8g_UpdateDimension
+                0x0000000008013074       0x32 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013074                u8g_UpdateDimension
  .text.u8g_Begin
-                0x000000000801307a       0x16 obj/SKYROVER/u8g_ll_api.o
-                0x000000000801307a                u8g_Begin
+                0x00000000080130a6       0x16 obj/SKYROVER/u8g_ll_api.o
+                0x00000000080130a6                u8g_Begin
  .text.u8g_InitComFn
-                0x0000000008013090       0x54 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008013090                u8g_InitComFn
+                0x00000000080130bc       0x54 obj/SKYROVER/u8g_ll_api.o
+                0x00000000080130bc                u8g_InitComFn
  .text.u8g_FirstPage
-                0x00000000080130e4        0x6 obj/SKYROVER/u8g_ll_api.o
-                0x00000000080130e4                u8g_FirstPage
+                0x0000000008013110        0x6 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013110                u8g_FirstPage
  .text.u8g_NextPage
-                0x00000000080130ea       0x16 obj/SKYROVER/u8g_ll_api.o
-                0x00000000080130ea                u8g_NextPage
+                0x0000000008013116       0x16 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013116                u8g_NextPage
  .text.u8g_Draw8Pixel
-                0x0000000008013100       0x28 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008013100                u8g_Draw8Pixel
+                0x000000000801312c       0x28 obj/SKYROVER/u8g_ll_api.o
+                0x000000000801312c                u8g_Draw8Pixel
  .text.u8g_SetColorIndex
-                0x0000000008013128        0x6 obj/SKYROVER/u8g_ll_api.o
-                0x0000000008013128                u8g_SetColorIndex
+                0x0000000008013154        0x6 obj/SKYROVER/u8g_ll_api.o
+                0x0000000008013154                u8g_SetColorIndex
  .text.u8g_page_First
-                0x000000000801312e        0xe obj/SKYROVER/u8g_page.o
-                0x000000000801312e                u8g_page_First
+                0x000000000801315a        0xe obj/SKYROVER/u8g_page.o
+                0x000000000801315a                u8g_page_First
  .text.u8g_page_Next
-                0x000000000801313c       0x30 obj/SKYROVER/u8g_page.o
-                0x000000000801313c                u8g_page_Next
+                0x0000000008013168       0x30 obj/SKYROVER/u8g_page.o
+                0x0000000008013168                u8g_page_Next
  .text.u8g_pb_Clear
-                0x000000000801316c       0x12 obj/SKYROVER/u8g_pb.o
-                0x000000000801316c                u8g_pb_Clear
+                0x0000000008013198       0x12 obj/SKYROVER/u8g_pb.o
+                0x0000000008013198                u8g_pb_Clear
  .text.u8g_pb_IsYIntersection
-                0x000000000801317e       0x2c obj/SKYROVER/u8g_pb.o
-                0x000000000801317e                u8g_pb_IsYIntersection
+                0x00000000080131aa       0x2c obj/SKYROVER/u8g_pb.o
+                0x00000000080131aa                u8g_pb_IsYIntersection
  .text.u8g_pb_GetPageBox
-                0x00000000080131aa       0x14 obj/SKYROVER/u8g_pb.o
-                0x00000000080131aa                u8g_pb_GetPageBox
+                0x00000000080131d6       0x14 obj/SKYROVER/u8g_pb.o
+                0x00000000080131d6                u8g_pb_GetPageBox
  .text.u8g_pb_Is8PixelVisible
-                0x00000000080131be       0x24 obj/SKYROVER/u8g_pb.o
-                0x00000000080131be                u8g_pb_Is8PixelVisible
+                0x00000000080131ea       0x24 obj/SKYROVER/u8g_pb.o
+                0x00000000080131ea                u8g_pb_Is8PixelVisible
  .text.u8g_pb_WriteBuffer
-                0x00000000080131e2        0xe obj/SKYROVER/u8g_pb.o
-                0x00000000080131e2                u8g_pb_WriteBuffer
+                0x000000000801320e        0xe obj/SKYROVER/u8g_pb.o
+                0x000000000801320e                u8g_pb_WriteBuffer
  .text.u8g_pb8v1_set_pixel
-                0x00000000080131f0       0x24 obj/SKYROVER/u8g_pb8v1.o
-                0x00000000080131f0                u8g_pb8v1_set_pixel
+                0x000000000801321c       0x24 obj/SKYROVER/u8g_pb8v1.o
+                0x000000000801321c                u8g_pb8v1_set_pixel
  .text.u8g_pb8v1_SetPixel
-                0x0000000008013214       0x26 obj/SKYROVER/u8g_pb8v1.o
-                0x0000000008013214                u8g_pb8v1_SetPixel
+                0x0000000008013240       0x26 obj/SKYROVER/u8g_pb8v1.o
+                0x0000000008013240                u8g_pb8v1_SetPixel
  .text.u8g_pb8v1_Set8PixelOpt2
-                0x000000000801323a       0x54 obj/SKYROVER/u8g_pb8v1.o
-                0x000000000801323a                u8g_pb8v1_Set8PixelOpt2
+                0x0000000008013266       0x54 obj/SKYROVER/u8g_pb8v1.o
+                0x0000000008013266                u8g_pb8v1_Set8PixelOpt2
  .text.u8g_dev_pb8v1_base_fn
-                0x000000000801328e       0x76 obj/SKYROVER/u8g_pb8v1.o
-                0x000000000801328e                u8g_dev_pb8v1_base_fn
+                0x00000000080132ba       0x76 obj/SKYROVER/u8g_pb8v1.o
+                0x00000000080132ba                u8g_dev_pb8v1_base_fn
  .text.u8g_state_dummy_cb
-                0x0000000008013304        0x2 obj/SKYROVER/u8g_state.o
-                0x0000000008013304                u8g_state_dummy_cb
- *fill*         0x0000000008013306        0x2 
- .text.cosf     0x0000000008013308       0x6c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_cos.o)
-                0x0000000008013308                cosf
- .text.lrintf   0x0000000008013374       0x7c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_lrint.o)
-                0x0000000008013374                lrintf
- .text.sinf     0x00000000080133f0       0x7c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_sin.o)
-                0x00000000080133f0                sinf
- .text.atan2f   0x000000000801346c        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_atan2.o)
-                0x000000000801346c                atan2f
- .text.powf     0x0000000008013470      0x310 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_pow.o)
-                0x0000000008013470                powf
- .text.sqrtf    0x0000000008013780       0x9c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_sqrt.o)
-                0x0000000008013780                sqrtf
+                0x0000000008013330        0x2 obj/SKYROVER/u8g_state.o
+                0x0000000008013330                u8g_state_dummy_cb
+ *fill*         0x0000000008013332        0x2 
+ .text.cosf     0x0000000008013334       0x6c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_cos.o)
+                0x0000000008013334                cosf
+ .text.lrintf   0x00000000080133a0       0x7c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_lrint.o)
+                0x00000000080133a0                lrintf
+ .text.sinf     0x000000000801341c       0x7c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_sin.o)
+                0x000000000801341c                sinf
+ .text.atan2f   0x0000000008013498        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_atan2.o)
+                0x0000000008013498                atan2f
+ .text.powf     0x000000000801349c      0x310 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_pow.o)
+                0x000000000801349c                powf
+ .text.sqrtf    0x00000000080137ac       0x9c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_sqrt.o)
+                0x00000000080137ac                sqrtf
  .text.__ieee754_atan2f
-                0x000000000801381c      0x120 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_atan2.o)
-                0x000000000801381c                __ieee754_atan2f
+                0x0000000008013848      0x120 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_atan2.o)
+                0x0000000008013848                __ieee754_atan2f
  .text.__ieee754_powf
-                0x000000000801393c      0x6f8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
-                0x000000000801393c                __ieee754_powf
+                0x0000000008013968      0x6f8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
+                0x0000000008013968                __ieee754_powf
  .text.__ieee754_rem_pio2f
-                0x0000000008014034      0x2e8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_rem_pio2.o)
-                0x0000000008014034                __ieee754_rem_pio2f
+                0x0000000008014060      0x2e8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_rem_pio2.o)
+                0x0000000008014060                __ieee754_rem_pio2f
  .text.__ieee754_sqrtf
-                0x000000000801431c       0xa8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_sqrt.o)
-                0x000000000801431c                __ieee754_sqrtf
+                0x0000000008014348       0xa8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_sqrt.o)
+                0x0000000008014348                __ieee754_sqrtf
  .text.__kernel_cosf
-                0x00000000080143c4      0x188 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_cos.o)
-                0x00000000080143c4                __kernel_cosf
+                0x00000000080143f0      0x188 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_cos.o)
+                0x00000000080143f0                __kernel_cosf
  .text.__kernel_rem_pio2f
-                0x000000000801454c      0x670 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_rem_pio2.o)
-                0x000000000801454c                __kernel_rem_pio2f
+                0x0000000008014578      0x670 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_rem_pio2.o)
+                0x0000000008014578                __kernel_rem_pio2f
  .text.__kernel_sinf
-                0x0000000008014bbc       0xec /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_sin.o)
-                0x0000000008014bbc                __kernel_sinf
- .text.matherr  0x0000000008014ca8        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-s_matherr.o)
-                0x0000000008014ca8                matherr
- .text.rint     0x0000000008014cac      0x118 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-s_rint.o)
-                0x0000000008014cac                rint
- .text.atanf    0x0000000008014dc4      0x22c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_atan.o)
-                0x0000000008014dc4                atanf
- .text.fabsf    0x0000000008014ff0        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_fabs.o)
-                0x0000000008014ff0                fabsf
- .text.finitef  0x0000000008014ff8       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_finite.o)
-                0x0000000008014ff8                finitef
- .text.floorf   0x0000000008015008       0x8c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_floor.o)
-                0x0000000008015008                floorf
+                0x0000000008014be8       0xec /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_sin.o)
+                0x0000000008014be8                __kernel_sinf
+ .text.matherr  0x0000000008014cd4        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-s_matherr.o)
+                0x0000000008014cd4                matherr
+ .text.rint     0x0000000008014cd8      0x118 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-s_rint.o)
+                0x0000000008014cd8                rint
+ .text.atanf    0x0000000008014df0      0x22c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_atan.o)
+                0x0000000008014df0                atanf
+ .text.fabsf    0x000000000801501c        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_fabs.o)
+                0x000000000801501c                fabsf
+ .text.finitef  0x0000000008015024       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_finite.o)
+                0x0000000008015024                finitef
+ .text.floorf   0x0000000008015034       0x8c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_floor.o)
+                0x0000000008015034                floorf
  .text.__fpclassifyf
-                0x0000000008015094       0x34 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_fpclassify.o)
-                0x0000000008015094                __fpclassifyf
- .text.nanf     0x00000000080150c8        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_nan.o)
-                0x00000000080150c8                nanf
- .text.scalbnf  0x00000000080150d0       0xb4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_scalbn.o)
-                0x00000000080150d0                scalbnf
+                0x00000000080150c0       0x34 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_fpclassify.o)
+                0x00000000080150c0                __fpclassifyf
+ .text.nanf     0x00000000080150f4        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_nan.o)
+                0x00000000080150f4                nanf
+ .text.scalbnf  0x00000000080150fc       0xb4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_scalbn.o)
+                0x00000000080150fc                scalbnf
  .text.copysignf
-                0x0000000008015184        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_copysign.o)
-                0x0000000008015184                copysignf
- .text.atoi     0x0000000008015190        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atoi.o)
-                0x0000000008015190                atoi
- .text.bsearch  0x0000000008015198       0x44 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-bsearch.o)
-                0x0000000008015198                bsearch
- .text.__errno  0x00000000080151dc        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
-                0x00000000080151dc                __errno
+                0x00000000080151b0        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_copysign.o)
+                0x00000000080151b0                copysignf
+ .text.atoi     0x00000000080151bc        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atoi.o)
+                0x00000000080151bc                atoi
+ .text.bsearch  0x00000000080151c4       0x44 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-bsearch.o)
+                0x00000000080151c4                bsearch
+ .text.__errno  0x0000000008015208        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+                0x0000000008015208                __errno
  .text.__libc_init_array
-                0x00000000080151e8       0x50 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
-                0x00000000080151e8                __libc_init_array
- .text.memset   0x0000000008015238       0x94 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
-                0x0000000008015238                memset
- .text.strcat   0x00000000080152cc       0x4c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strcat.o)
-                0x00000000080152cc                strcat
- .text.strchr   0x0000000008015318       0xf4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strchr.o)
-                0x0000000008015318                strchr
- .text.strcpy   0x000000000801540c       0xbc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strcpy.o)
-                0x000000000801540c                strcpy
- .text.strlen   0x00000000080154c8       0x60 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
-                0x00000000080154c8                strlen
+                0x0000000008015214       0x50 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+                0x0000000008015214                __libc_init_array
+ .text.memset   0x0000000008015264       0x94 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+                0x0000000008015264                memset
+ .text.strcat   0x00000000080152f8       0x4c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strcat.o)
+                0x00000000080152f8                strcat
+ .text.strchr   0x0000000008015344       0xf4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strchr.o)
+                0x0000000008015344                strchr
+ .text.strcpy   0x0000000008015438       0xbc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strcpy.o)
+                0x0000000008015438                strcpy
+ .text.strlen   0x00000000080154f4       0x60 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                0x00000000080154f4                strlen
  .text.strncasecmp
-                0x0000000008015528       0x50 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strncasecmp.o)
-                0x0000000008015528                strncasecmp
- .text.strncpy  0x0000000008015578       0x64 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strncpy.o)
-                0x0000000008015578                strncpy
+                0x0000000008015554       0x50 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strncasecmp.o)
+                0x0000000008015554                strncasecmp
+ .text.strncpy  0x00000000080155a4       0x64 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strncpy.o)
+                0x00000000080155a4                strncpy
  .text.critical_factorization
-                0x00000000080155dc       0xbc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strstr.o)
+                0x0000000008015608       0xbc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strstr.o)
  .text.two_way_long_needle
-                0x0000000008015698      0x1ec /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strstr.o)
- .text.strstr   0x0000000008015884      0x200 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strstr.o)
-                0x0000000008015884                strstr
- .text.strtok   0x0000000008015a84       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtok.o)
-                0x0000000008015a84                strtok
+                0x00000000080156c4      0x1ec /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strstr.o)
+ .text.strstr   0x00000000080158b0      0x200 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strstr.o)
+                0x00000000080158b0                strstr
+ .text.strtok   0x0000000008015ab0       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtok.o)
+                0x0000000008015ab0                strtok
  .text.__strtok_r
-                0x0000000008015a94       0x64 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtok_r.o)
-                0x0000000008015a94                __strtok_r
+                0x0000000008015ac0       0x64 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtok_r.o)
+                0x0000000008015ac0                __strtok_r
  .text._strtol_r
-                0x0000000008015af8      0x114 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtol.o)
-                0x0000000008015af8                _strtol_r
- .text.strtol   0x0000000008015c0c       0x18 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtol.o)
-                0x0000000008015c0c                strtol
+                0x0000000008015b24      0x114 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtol.o)
+                0x0000000008015b24                _strtol_r
+ .text.strtol   0x0000000008015c38       0x18 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strtol.o)
+                0x0000000008015c38                strtol
  .text.startup.register_fini
-                0x0000000008015c24       0x14 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0000000008015c38        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
-                0x0000000008015c38                atexit
+                0x0000000008015c50       0x14 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008015c64        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+                0x0000000008015c64                atexit
  .text.__libc_fini_array
-                0x0000000008015c44       0x30 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
-                0x0000000008015c44                __libc_fini_array
- .text.memchr   0x0000000008015c74       0x94 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
-                0x0000000008015c74                memchr
- .text.memcmp   0x0000000008015d08       0x68 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memcmp.o)
-                0x0000000008015d08                memcmp
+                0x0000000008015c70       0x30 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+                0x0000000008015c70                __libc_fini_array
+ .text.memchr   0x0000000008015ca0       0x94 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
+                0x0000000008015ca0                memchr
+ .text.memcmp   0x0000000008015d34       0x68 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memcmp.o)
+                0x0000000008015d34                memcmp
  .text.__register_exitproc
-                0x0000000008015d70       0xa8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
-                0x0000000008015d70                __register_exitproc
+                0x0000000008015d9c       0xa8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+                0x0000000008015d9c                __register_exitproc
  *(.rodata)
- .rodata        0x0000000008015e18        0x8 obj/SKYROVER/config.o
- .rodata        0x0000000008015e20       0x10 obj/SKYROVER/drv_system.o
- .rodata        0x0000000008015e30       0x3c obj/SKYROVER/thread_main.o
+ .rodata        0x0000000008015e44        0x8 obj/SKYROVER/config.o
+ .rodata        0x0000000008015e4c       0x10 obj/SKYROVER/drv_system.o
+ .rodata        0x0000000008015e5c       0x3c obj/SKYROVER/thread_main.o
  *(.rodata*)
  .rodata.airPPM
-                0x0000000008015e6c        0xc obj/SKYROVER/drv_pwm.o
+                0x0000000008015e98        0xc obj/SKYROVER/drv_pwm.o
  .rodata.multiPPM
-                0x0000000008015e78        0xc obj/SKYROVER/drv_pwm.o
+                0x0000000008015ea4        0xc obj/SKYROVER/drv_pwm.o
  .rodata.airPWM
-                0x0000000008015e84        0xf obj/SKYROVER/drv_pwm.o
- *fill*         0x0000000008015e93        0x1 
+                0x0000000008015eb0        0xf obj/SKYROVER/drv_pwm.o
+ *fill*         0x0000000008015ebf        0x1 
  .rodata.hardwareMaps
-                0x0000000008015e94       0x10 obj/SKYROVER/drv_pwm.o
+                0x0000000008015ec0       0x10 obj/SKYROVER/drv_pwm.o
  .rodata.multiPWM
-                0x0000000008015ea4        0xf obj/SKYROVER/drv_pwm.o
- *fill*         0x0000000008015eb3        0x1 
+                0x0000000008015ed0        0xf obj/SKYROVER/drv_pwm.o
+ *fill*         0x0000000008015edf        0x1 
  .rodata.timerHardware
-                0x0000000008015eb4       0xe0 obj/SKYROVER/drv_timer.o
-                0x0000000008015eb4                timerHardware
+                0x0000000008015ee0       0xe0 obj/SKYROVER/drv_timer.o
+                0x0000000008015ee0                timerHardware
  .rodata.timers
-                0x0000000008015f94       0x10 obj/SKYROVER/drv_timer.o
+                0x0000000008015fc0       0x10 obj/SKYROVER/drv_timer.o
  .rodata.channels
-                0x0000000008015fa4        0x4 obj/SKYROVER/drv_timer.o
+                0x0000000008015fd0        0x4 obj/SKYROVER/drv_timer.o
  .rodata.CSWTCH.20
-                0x0000000008015fa8       0x16 obj/SKYROVER/buzzer.o
- *fill*         0x0000000008015fbe        0x2 
+                0x0000000008015fd4       0x16 obj/SKYROVER/buzzer.o
+ *fill*         0x0000000008015fea        0x2 
  .rodata.featureNames
-                0x0000000008015fc0       0x40 obj/SKYROVER/cli.o
+                0x0000000008015fec       0x40 obj/SKYROVER/cli.o
  .rodata.mixerNames
-                0x0000000008016000       0x5c obj/SKYROVER/cli.o
+                0x000000000801602c       0x5c obj/SKYROVER/cli.o
  .rodata.cmdTable
-                0x000000000801605c       0xc0 obj/SKYROVER/cli.o
-                0x000000000801605c                cmdTable
+                0x0000000008016088       0xc0 obj/SKYROVER/cli.o
+                0x0000000008016088                cmdTable
  .rodata.accNames
-                0x000000000801611c       0x1c obj/SKYROVER/cli.o
+                0x0000000008016148       0x1c obj/SKYROVER/cli.o
  .rodata.str1.1
-                0x0000000008016138      0xdd0 obj/SKYROVER/cli.o
+                0x0000000008016164      0xdd0 obj/SKYROVER/cli.o
                                         0xe42 (size before relaxing)
  .rodata.sensorNames
-                0x0000000008016f08       0x20 obj/SKYROVER/cli.o
+                0x0000000008016f34       0x20 obj/SKYROVER/cli.o
  .rodata.valueTable
-                0x0000000008016f28      0x820 obj/SKYROVER/cli.o
-                0x0000000008016f28                valueTable
+                0x0000000008016f54      0x820 obj/SKYROVER/cli.o
+                0x0000000008016f54                valueTable
  .rodata.rcChannelLetters
-                0x0000000008017748        0x9 obj/SKYROVER/config.o
-                0x0000000008017748                rcChannelLetters
+                0x0000000008017774        0x9 obj/SKYROVER/config.o
+                0x0000000008017774                rcChannelLetters
  .rodata.str1.1
-                0x0000000008017751        0x9 obj/SKYROVER/config.o
+                0x000000000801777d        0x9 obj/SKYROVER/config.o
  .rodata.str1.1
-                0x000000000801775a       0xda obj/SKYROVER/gps.o
+                0x0000000008017786       0xda obj/SKYROVER/gps.o
                                          0xdb (size before relaxing)
  .rodata.ubloxInit
-                0x0000000008017834       0x8c obj/SKYROVER/gps.o
+                0x0000000008017860       0x8c obj/SKYROVER/gps.o
  .rodata.gpsInitData
-                0x00000000080178c0       0x3c obj/SKYROVER/gps.o
+                0x00000000080178ec       0x3c obj/SKYROVER/gps.o
  .rodata.str1.1
-                0x00000000080178fc       0x1d obj/SKYROVER/main.o
+                0x0000000008017928       0x1d obj/SKYROVER/main.o
                                          0x20 (size before relaxing)
- *fill*         0x0000000008017919        0x3 
+ *fill*         0x0000000008017945        0x3 
  .rodata.mixerOctoFlatX
-                0x000000000801791c       0x80 obj/SKYROVER/mixer.o
+                0x0000000008017948       0x80 obj/SKYROVER/mixer.o
  .rodata.mixerTri
-                0x000000000801799c       0x30 obj/SKYROVER/mixer.o
+                0x00000000080179c8       0x30 obj/SKYROVER/mixer.o
  .rodata.mixerHex6H
-                0x00000000080179cc       0x60 obj/SKYROVER/mixer.o
+                0x00000000080179f8       0x60 obj/SKYROVER/mixer.o
  .rodata.mixerY6
-                0x0000000008017a2c       0x60 obj/SKYROVER/mixer.o
+                0x0000000008017a58       0x60 obj/SKYROVER/mixer.o
  .rodata.mixers
-                0x0000000008017a8c       0xb8 obj/SKYROVER/mixer.o
-                0x0000000008017a8c                mixers
+                0x0000000008017ab8       0xb8 obj/SKYROVER/mixer.o
+                0x0000000008017ab8                mixers
  .rodata.mixerOctoFlatP
-                0x0000000008017b44       0x80 obj/SKYROVER/mixer.o
+                0x0000000008017b70       0x80 obj/SKYROVER/mixer.o
  .rodata.mixerQuadX
-                0x0000000008017bc4       0x40 obj/SKYROVER/mixer.o
+                0x0000000008017bf0       0x40 obj/SKYROVER/mixer.o
  .rodata.mixerHex6P
-                0x0000000008017c04       0x60 obj/SKYROVER/mixer.o
+                0x0000000008017c30       0x60 obj/SKYROVER/mixer.o
  .rodata.mixerY4
-                0x0000000008017c64       0x40 obj/SKYROVER/mixer.o
+                0x0000000008017c90       0x40 obj/SKYROVER/mixer.o
  .rodata.mixerVtail4
-                0x0000000008017ca4       0x40 obj/SKYROVER/mixer.o
+                0x0000000008017cd0       0x40 obj/SKYROVER/mixer.o
  .rodata.mixerDualcopter
-                0x0000000008017ce4       0x20 obj/SKYROVER/mixer.o
+                0x0000000008017d10       0x20 obj/SKYROVER/mixer.o
  .rodata.mixerQuadP
-                0x0000000008017d04       0x40 obj/SKYROVER/mixer.o
+                0x0000000008017d30       0x40 obj/SKYROVER/mixer.o
  .rodata.mixerHex6X
-                0x0000000008017d44       0x60 obj/SKYROVER/mixer.o
+                0x0000000008017d70       0x60 obj/SKYROVER/mixer.o
  .rodata.mixerOctoX8
-                0x0000000008017da4       0x80 obj/SKYROVER/mixer.o
+                0x0000000008017dd0       0x80 obj/SKYROVER/mixer.o
  .rodata.mixerBi
-                0x0000000008017e24       0x20 obj/SKYROVER/mixer.o
+                0x0000000008017e50       0x20 obj/SKYROVER/mixer.o
  .rodata.str1.1
-                0x0000000008017e44       0x4a obj/SKYROVER/sensors.o
+                0x0000000008017e70       0x4a obj/SKYROVER/sensors.o
  .rodata.pidnames
-                0x0000000008017e8e       0x30 obj/SKYROVER/serial.o
+                0x0000000008017eba       0x30 obj/SKYROVER/serial.o
  .rodata.str1.1
-                0x0000000008017ebe       0xaf obj/SKYROVER/serial.o
- *fill*         0x0000000008017f6d        0x3 
+                0x0000000008017eea       0xaf obj/SKYROVER/serial.o
+ *fill*         0x0000000008017f99        0x3 
  .rodata.softSerialVTable
-                0x0000000008017f70       0x14 obj/SKYROVER/drv_softserial.o
-                0x0000000008017f70                softSerialVTable
+                0x0000000008017f9c       0x14 obj/SKYROVER/drv_softserial.o
+                0x0000000008017f9c                softSerialVTable
  .rodata.uartVTable
-                0x0000000008017f84       0x14 obj/SKYROVER/drv_uart.o
-                0x0000000008017f84                uartVTable
+                0x0000000008017fb0       0x14 obj/SKYROVER/drv_uart.o
+                0x0000000008017fb0                uartVTable
  .rodata.str1.1
-                0x0000000008017f98        0x5 obj/SKYROVER/tasks.o
+                0x0000000008017fc4        0x5 obj/SKYROVER/tasks.o
  .rodata.str1.1
-                0x0000000008017f9d        0x8 obj/SKYROVER/timers.o
+                0x0000000008017fc9        0x8 obj/SKYROVER/timers.o
  .rodata.Virtual_Com_Port_StringVendor
-                0x0000000008017fa5       0x26 obj/SKYROVER/usb_desc.o
-                0x0000000008017fa5                Virtual_Com_Port_StringVendor
+                0x0000000008017fd1       0x26 obj/SKYROVER/usb_desc.o
+                0x0000000008017fd1                Virtual_Com_Port_StringVendor
  .rodata.Virtual_Com_Port_DeviceDescriptor
-                0x0000000008017fcb       0x12 obj/SKYROVER/usb_desc.o
-                0x0000000008017fcb                Virtual_Com_Port_DeviceDescriptor
+                0x0000000008017ff7       0x12 obj/SKYROVER/usb_desc.o
+                0x0000000008017ff7                Virtual_Com_Port_DeviceDescriptor
  .rodata.Virtual_Com_Port_StringLangID
-                0x0000000008017fdd        0x4 obj/SKYROVER/usb_desc.o
-                0x0000000008017fdd                Virtual_Com_Port_StringLangID
+                0x0000000008018009        0x4 obj/SKYROVER/usb_desc.o
+                0x0000000008018009                Virtual_Com_Port_StringLangID
  .rodata.Virtual_Com_Port_StringProduct
-                0x0000000008017fe1       0x32 obj/SKYROVER/usb_desc.o
-                0x0000000008017fe1                Virtual_Com_Port_StringProduct
+                0x000000000801800d       0x32 obj/SKYROVER/usb_desc.o
+                0x000000000801800d                Virtual_Com_Port_StringProduct
  .rodata.Virtual_Com_Port_ConfigDescriptor
-                0x0000000008018013       0x43 obj/SKYROVER/usb_desc.o
-                0x0000000008018013                Virtual_Com_Port_ConfigDescriptor
+                0x000000000801803f       0x43 obj/SKYROVER/usb_desc.o
+                0x000000000801803f                Virtual_Com_Port_ConfigDescriptor
  .rodata.str1.1
-                0x0000000008018056       0x2e obj/SKYROVER/thread_lcd.o
+                0x0000000008018082       0x2e obj/SKYROVER/thread_lcd.o
                                          0x3b (size before relaxing)
  .rodata.SkyRover_Nano_Logo
-                0x0000000008018084      0x400 obj/SKYROVER/thread_lcd.o
-                0x0000000008018084                SkyRover_Nano_Logo
+                0x00000000080180b0      0x400 obj/SKYROVER/thread_lcd.o
+                0x00000000080180b0                SkyRover_Nano_Logo
  .rodata.str1.1
-                0x0000000008018484       0x1f obj/SKYROVER/thread_main.o
- *fill*         0x00000000080184a3        0x1 
+                0x00000000080184b0       0x1f obj/SKYROVER/thread_main.o
+ *fill*         0x00000000080184cf        0x1 
  .rodata.os_mutex_def_MUTEX1
-                0x00000000080184a4        0x4 obj/SKYROVER/thread_main.o
-                0x00000000080184a4                os_mutex_def_MUTEX1
+                0x00000000080184d0        0x4 obj/SKYROVER/thread_main.o
+                0x00000000080184d0                os_mutex_def_MUTEX1
  .rodata.str1.1
-                0x00000000080184a8      0x386 obj/SKYROVER/thread_menu.o
-                                        0x3a0 (size before relaxing)
+                0x00000000080184d4      0x3c0 obj/SKYROVER/thread_menu.o
+                                        0x3da (size before relaxing)
  .rodata.str1.1
-                0x000000000801882e       0x12 obj/SKYROVER/thread_mw.o
+                0x0000000008018894       0x12 obj/SKYROVER/thread_mw.o
  .rodata.u8g_dev_ssd13xx_sleep_off
-                0x0000000008018840        0xb obj/SKYROVER/u8g_dev_ssd1306_128x64.o
+                0x00000000080188a6        0xb obj/SKYROVER/u8g_dev_ssd1306_128x64.o
  .rodata.u8g_dev_ssd13xx_sleep_on
-                0x000000000801884b        0x9 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
+                0x00000000080188b1        0x9 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
  .rodata.u8g_dev_ssd1306_128x64_adafruit2_init_seq
-                0x0000000008018854       0x26 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
+                0x00000000080188ba       0x26 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
  .rodata.u8g_dev_ssd1306_128x64_data_start
-                0x000000000801887a        0x8 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
+                0x00000000080188e0        0x8 obj/SKYROVER/u8g_dev_ssd1306_128x64.o
  .rodata.u8g_font_unifont
-                0x0000000008018882     0x158c obj/SKYROVER/u8g_font_data.o
-                0x0000000008018882                u8g_font_unifont
+                0x00000000080188e8     0x158c obj/SKYROVER/u8g_font_data.o
+                0x00000000080188e8                u8g_font_unifont
  .rodata.u8g_font_6x10
-                0x0000000008019e0e      0x74a obj/SKYROVER/u8g_font_data.o
-                0x0000000008019e0e                u8g_font_6x10
- .rodata.TWO23  0x000000000801a558        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_lrint.o)
+                0x0000000008019e74      0x74a obj/SKYROVER/u8g_font_data.o
+                0x0000000008019e74                u8g_font_6x10
+ *fill*         0x000000000801a5be        0x2 
+ .rodata.TWO23  0x000000000801a5c0        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_lrint.o)
  .rodata.str1.4
-                0x000000000801a560        0x5 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_pow.o)
+                0x000000000801a5c8        0x5 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_pow.o)
                                           0x8 (size before relaxing)
- *fill*         0x000000000801a565        0x3 
+ *fill*         0x000000000801a5cd        0x3 
  .rodata.str1.4
-                0x000000000801a568        0x6 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_sqrt.o)
+                0x000000000801a5d0        0x6 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-wf_sqrt.o)
                                           0x8 (size before relaxing)
- *fill*         0x000000000801a56e        0x2 
- .rodata.dp_h   0x000000000801a570        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
- .rodata.dp_l   0x000000000801a578        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
- .rodata.bp     0x000000000801a580        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
+ *fill*         0x000000000801a5d6        0x2 
+ .rodata.dp_h   0x000000000801a5d8        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
+ .rodata.dp_l   0x000000000801a5e0        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
+ .rodata.bp     0x000000000801a5e8        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
  .rodata.str1.4
                 0x0000000000000000        0x6 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_pow.o)
                                           0x4 (size before relaxing)
  .rodata.npio2_hw
-                0x000000000801a588       0x80 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_rem_pio2.o)
+                0x000000000801a5f0       0x80 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_rem_pio2.o)
  .rodata.two_over_pi
-                0x000000000801a608      0x318 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_rem_pio2.o)
+                0x000000000801a670      0x318 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-ef_rem_pio2.o)
  .rodata.init_jk
-                0x000000000801a920        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_rem_pio2.o)
- .rodata.PIo2   0x000000000801a92c       0x2c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_rem_pio2.o)
- .rodata.TWO52  0x000000000801a958       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-s_rint.o)
+                0x000000000801a988        0xc /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_rem_pio2.o)
+ .rodata.PIo2   0x000000000801a994       0x2c /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-kf_rem_pio2.o)
+ .rodata.TWO52  0x000000000801a9c0       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-s_rint.o)
  .rodata.atanlo
-                0x000000000801a968       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_atan.o)
+                0x000000000801a9d0       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_atan.o)
  .rodata.atanhi
-                0x000000000801a978       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_atan.o)
+                0x000000000801a9e0       0x10 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libm.a(lib_a-sf_atan.o)
  .rodata._ctype_
-                0x000000000801a988      0x104 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-ctype_.o)
-                0x000000000801a988                _ctype_
+                0x000000000801a9f0      0x104 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-ctype_.o)
+                0x000000000801a9f0                _ctype_
  .rodata.str1.4
-                0x000000000801aa8c        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                0x000000000801aaf4        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x000000000801aa90        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
-                0x000000000801aa90                _global_impure_ptr
+                0x000000000801aaf8        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                0x000000000801aaf8                _global_impure_ptr
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x000000000801aa94        0x0 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
+ .eh_frame      0x000000000801aafc        0x0 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
  *(.init)
- .init          0x000000000801aa94        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crti.o
-                0x000000000801aa94                _init
- .init          0x000000000801aa98        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtn.o
+ .init          0x000000000801aafc        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crti.o
+                0x000000000801aafc                _init
+ .init          0x000000000801ab00        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtn.o
  *(.fini)
- .fini          0x000000000801aaa0        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crti.o
-                0x000000000801aaa0                _fini
- .fini          0x000000000801aaa4        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtn.o
-                0x000000000801aaac                . = ALIGN (0x4)
-                0x000000000801aaac                _etext = .
+ .fini          0x000000000801ab08        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crti.o
+                0x000000000801ab08                _fini
+ .fini          0x000000000801ab0c        0x8 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtn.o
+                0x000000000801ab14                . = ALIGN (0x4)
+                0x000000000801ab14                _etext = .
 
-.vfp11_veneer   0x000000000801aaac        0x0
+.vfp11_veneer   0x000000000801ab14        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x000000000801aaac        0x0
+.v4_bx          0x000000000801ab14        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x000000000801aaac        0x0
+.iplt           0x000000000801ab14        0x0
  .iplt          0x0000000000000000        0x0 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
 
-.rel.dyn        0x000000000801aaac        0x0
+.rel.dyn        0x000000000801ab14        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000801aaac        0x0
-                0x000000000801aaac                __exidx_start = .
+.ARM            0x000000000801ab14        0x0
+                0x000000000801ab14                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000801aaac                __exidx_end = .
+                0x000000000801ab14                __exidx_end = .
 
-.preinit_array  0x000000000801aaac        0x0
-                0x000000000801aaac                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000000000801ab14        0x0
+                0x000000000801ab14                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x000000000801aaac                PROVIDE (__preinit_array_end, .)
+                0x000000000801ab14                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x000000000801aaac        0x8
-                0x000000000801aaac                PROVIDE (__init_array_start, .)
+.init_array     0x000000000801ab14        0x8
+                0x000000000801ab14                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  .init_array.00000
-                0x000000000801aaac        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                0x000000000801ab14        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x000000000801aab0        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
-                0x000000000801aab4                PROVIDE (__init_array_end, .)
+ .init_array    0x000000000801ab18        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
+                0x000000000801ab1c                PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000801aab4        0x4
-                0x000000000801aab4                PROVIDE (__fini_array_start, .)
+.fini_array     0x000000000801ab1c        0x4
+                0x000000000801ab1c                PROVIDE (__fini_array_start, .)
  *(.fini_array*)
- .fini_array    0x000000000801aab4        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
+ .fini_array    0x000000000801ab1c        0x4 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000000000801aab8                PROVIDE (__fini_array_end, .)
-                0x000000000801aab8                _sidata = .
+                0x000000000801ab20                PROVIDE (__fini_array_end, .)
+                0x000000000801ab20                _sidata = .
 
-.data           0x0000000020000000      0x6bc load address 0x000000000801aab8
+.data           0x0000000020000000      0x6bc load address 0x000000000801ab20
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -7393,14 +7397,14 @@ LOAD /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib
                 0x00000000200006bc                . = ALIGN (0x4)
                 0x00000000200006bc                _edata = .
 
-.jcr            0x00000000200006bc        0x0 load address 0x000000000801b174
+.jcr            0x00000000200006bc        0x0 load address 0x000000000801b1dc
  .jcr           0x00000000200006bc        0x0 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
 
-.igot.plt       0x00000000200006bc        0x0 load address 0x000000000801b174
+.igot.plt       0x00000000200006bc        0x0 load address 0x000000000801b1dc
  .igot.plt      0x0000000000000000        0x0 /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
                 0x00000000200006bc                . = ALIGN (0x4)
 
-.bss            0x00000000200006bc     0x37d8 load address 0x000000000801b174
+.bss            0x00000000200006bc     0x37d8 load address 0x000000000801b1dc
                 0x00000000200006bc                _sbss = .
                 0x00000000200006bc                __bss_start__ = _sbss
  *(.bss)
@@ -8122,7 +8126,7 @@ LOAD /Users/imac/Develop/stm32f4/arm_gcc/gcc-arm-none-eabi-4_8-2014q2/bin/../lib
                 0x0000000020003e94                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020003e94      0x400 load address 0x000000000801b174
+                0x0000000020003e94      0x400 load address 0x000000000801b1dc
                 0x0000000020003e94                . = ALIGN (0x4)
                 0x0000000020003e94                PROVIDE (end, .)
                 0x0000000020003e94                PROVIDE (_end, .)

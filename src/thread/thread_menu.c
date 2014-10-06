@@ -86,6 +86,7 @@ void _menu_printf( char *format, ... )
 
 //-- 내부 함수
 //
+void cmd_go_bootloader( void );
 void cmd_bluetooth_setup( void );
 void cmd_bluetooth_check( void );
 
@@ -139,6 +140,7 @@ static void _menu_show_menu(void)
 	_menu_printf("  8.                                                   \n\r");
 	_menu_printf("  9.                                                   \n\r");
 	_menu_printf("  m.  Menu                                             \n\r");
+	_menu_printf("  z.  Go to bootloader                                 \n\r");
 	_menu_printf("*******************************************************\n\r");
 	_menu_printf("\n\r");
 }
@@ -252,6 +254,10 @@ void thread_menu(void const *argument)
 					_menu_show_cmd();
 					break;
 
+				case 'z':
+					cmd_go_bootloader();
+					break;
+
 				default:
 					break;
 
@@ -266,6 +272,23 @@ void thread_menu(void const *argument)
         }
         osDelay(1);
     }
+}
+
+
+
+
+/*---------------------------------------------------------------------------
+     TITLE   : cmd_go_bootloader
+     WORK    :
+     ARG     : void
+     RET     : void
+---------------------------------------------------------------------------*/
+void cmd_go_bootloader( void )
+{
+	IWDG->PR  = 0; 		// divider / 4
+	IWDG->RLR = 1;
+
+	IWDG->KR  = 0xCCCC;	// Start
 }
 
 
