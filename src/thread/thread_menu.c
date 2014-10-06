@@ -19,6 +19,7 @@
 #define  THREAD_MENU_LOCAL
 
 #include "thread_menu.h"
+#include "thread_lcd.h"
 #include "mw.h"
 
 #include "usb_lib.h"
@@ -200,7 +201,7 @@ void thread_menu(void const *argument)
     (void) argument;
     uint8_t cmd;
     uint8_t show_menu_flag;
-    uint8_t pos = 0;
+
 
     DEBUG_PRINT("Thread Menu\r\n");
 
@@ -285,6 +286,22 @@ void thread_menu(void const *argument)
 ---------------------------------------------------------------------------*/
 void cmd_go_bootloader( void )
 {
+	/*
+	USB_Cable_Config(DISABLE);
+
+	RCC->APB1RSTR = 0xFFFFFFFF;
+	RCC->APB2RSTR = 0xFFFFFFFF;
+	RCC->APB1RSTR = 0x00000000;
+	RCC->APB2RSTR = 0x00000000;
+	*/
+
+	if( mcfg.uart1_type == _UART1_TYPE_LCD )
+	{
+		thread_lcd_show_goboot();
+	}
+
+	osDelay(500);
+
 	IWDG->PR  = 0; 		// divider / 4
 	IWDG->RLR = 1;
 

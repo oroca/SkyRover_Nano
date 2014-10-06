@@ -36,8 +36,9 @@ EXT_THREAD_LCD_DEF uint8_t	thread_lcd_draw_lcd_flag;
 
 
 
-EXT_THREAD_LCD_DEF void thread_lcd(void const *argument);
 
+EXT_THREAD_LCD_DEF void thread_lcd(void const *argument);
+EXT_THREAD_LCD_DEF void thread_lcd_show_goboot( void);
 
 
 #endif

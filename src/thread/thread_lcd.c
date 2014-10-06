@@ -45,7 +45,7 @@ uint8_t	lcd_state;
 //
 void _draw_intro( void );
 void _draw_status( void );
-
+void _draw_go_boot( void );
 
 
 
@@ -93,10 +93,29 @@ void thread_lcd(void const *argument)
     		case 1:
     			_draw_status();
     			break;
+
+    		case 99:
+    			_draw_go_boot();
+    			break;
     	}
 
 		osDelay(100);
     }
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------
+     TITLE   : thread_lcd_show_goboot
+     WORK    :
+     ARG     : void
+     RET     : void
+---------------------------------------------------------------------------*/
+void thread_lcd_show_goboot( void )
+{
+	lcd_state = 99;
 }
 
 
@@ -158,5 +177,27 @@ void _draw_status( void )
     	tfp_sprintf( str, "Y: %d", heading );
     	u8g_DrawStr( &u8g, 0, line_space*3, str );
 
+    } while ( u8g_NextPage(&u8g) );
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------
+     TITLE   : _draw_go_boot
+     WORK    :
+     ARG     : void
+     RET     : void
+---------------------------------------------------------------------------*/
+void _draw_go_boot( void )
+{
+    u8g_FirstPage(&u8g);
+    do
+    {
+    	u8g_SetFont(&u8g, u8g_font_unifont);
+    	u8g_SetFontPosTop(&u8g);
+
+    	u8g_DrawStr(&u8g,  0, 0, "Go to boot..");
     } while ( u8g_NextPage(&u8g) );
 }
