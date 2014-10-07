@@ -222,7 +222,7 @@ void thread_menu(void const *argument)
 				case '1':
 					while( !_menu_received() )
 					{
-						_menu_printf( "Angle : %d\t %d\t %d\t"  , angle[0], angle[1], heading );
+						_menu_printf( "Angle : %d\t %d\t %d\t %d "  , angle[0], angle[1], heading, EstAlt );
 						_menu_printf( "rc :\t %d\t %d\t %d\t %d\t \r\n", rcCommand[0], rcCommand[1], rcCommand[2], rcCommand[3] );
 						osDelay(100);
 					}

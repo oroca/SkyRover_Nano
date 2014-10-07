@@ -132,11 +132,16 @@ void _draw_intro( void )
     u8g_FirstPage(&u8g);
     do
     {
-    	u8g_SetFont(&u8g, u8g_font_unifont);
-    	u8g_SetFontPosTop(&u8g);
+    	//u8g_SetFont(&u8g, u8g_font_unifont);
+    	u8g_SetFont(&u8g, u8g_font_6x10);
+    	//u8g_SetFontPosTop(&u8g);
 
     	//u8g_DrawStr(&u8g,  0, 0, "Hello World!");
     	u8g_DrawBitmap(&u8g, 0, 0, 128/8, 64, SkyRover_Nano_Logo);
+
+    	u8g_DrawStr(&u8g, 128/2-u8g_GetStrWidth(&u8g, _SKYROVER_VER_STR_)/2, 64, _SKYROVER_VER_STR_);
+
+
     } while ( u8g_NextPage(&u8g) );
 }
 
@@ -176,6 +181,9 @@ void _draw_status( void )
 
     	tfp_sprintf( str, "Y: %d", heading );
     	u8g_DrawStr( &u8g, 0, line_space*3, str );
+
+    	tfp_sprintf( str, "A: %d", EstAlt );
+    	u8g_DrawStr( &u8g, 0, line_space*4, str );
 
     } while ( u8g_NextPage(&u8g) );
 }

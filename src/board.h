@@ -24,7 +24,7 @@
 #include "drv_gpio.h"
 
 
-#define _SKYROVER_VER_STR_  	"V141006R1"
+#define _SKYROVER_VER_STR_  	"V141007R1"
 
 
 #define PORT_UART1				1
@@ -221,12 +221,12 @@ typedef struct baro_t
 
 // Helpful macros
 #define LED0_TOGGLE              digitalToggle(LED0_GPIO, LED0_PIN);
-#define LED0_OFF                 digitalHi(LED0_GPIO, LED0_PIN);
-#define LED0_ON                  digitalLo(LED0_GPIO, LED0_PIN);
+#define LED0_OFF                 digitalLo(LED0_GPIO, LED0_PIN);
+#define LED0_ON                  digitalHi(LED0_GPIO, LED0_PIN);
 
 #define LED1_TOGGLE              digitalToggle(LED1_GPIO, LED1_PIN);
-#define LED1_OFF                 digitalHi(LED1_GPIO, LED1_PIN);
-#define LED1_ON                  digitalLo(LED1_GPIO, LED1_PIN);
+#define LED1_OFF                 digitalLo(LED1_GPIO, LED1_PIN);
+#define LED1_ON                  digitalHi(LED1_GPIO, LED1_PIN);
 
 #ifdef BEEP_GPIO
 #define BEEP_TOGGLE              digitalToggle(BEEP_GPIO, BEEP_PIN);
