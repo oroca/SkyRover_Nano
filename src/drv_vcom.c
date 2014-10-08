@@ -45,7 +45,6 @@ static void usb_putc(void *p, char c)
 }
 
 
-
 /*---------------------------------------------------------------------------
      TITLE   : Hw_VCom_Init
      WORK    :

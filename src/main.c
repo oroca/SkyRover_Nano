@@ -44,9 +44,14 @@ int main(void)
     serialPort_t* loopbackPort = NULL;
 
 
+
     //-- 하드웨어 초기화
     //
     systemInit();
+
+    //-- USB 초기
+    //
+    Hw_VCom_Init();
 
 
 #ifdef USE_LAME_PRINTF
@@ -210,9 +215,6 @@ int main(void)
     calibratingB = CALIBRATING_BARO_CYCLES;             // 10 seconds init_delay + 200 * 25 ms = 15 seconds before ground pressure settles
     f.SMALL_ANGLES_25 = 1;
 
-    //-- 센서초기화 루틴때문에 USB 통신안되는것 때문에 마지막으로 순서 변경
-    //
-    Hw_VCom_Init();
 
     DEBUG_PRINT("Start\r\n");
 

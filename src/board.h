@@ -24,7 +24,7 @@
 #include "drv_gpio.h"
 
 
-#define _SKYROVER_VER_STR_  	"V141007R1"
+#define _SKYROVER_VER_STR_  	"V141008R1"
 
 
 #define PORT_UART1				1
