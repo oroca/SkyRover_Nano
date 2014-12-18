@@ -90,7 +90,7 @@ void _menu_printf( char *format, ... )
 void cmd_go_bootloader( void );
 void cmd_bluetooth_setup( void );
 void cmd_bluetooth_check( void );
-
+void cmd_bluetooth_change_name( void );
 
 
 
@@ -135,10 +135,10 @@ static void _menu_show_menu(void)
 	_menu_printf("  2. Bluetooth Setup                                   \n\r");
 	_menu_printf("  3. Bluetooth Check                                   \n\r");
 	_menu_printf("  4. Uart1 : "); _menu_show_uart1_type();
-	_menu_printf("  5.                                                   \n\r");
-	_menu_printf("  6.                                                   \n\r");
-	_menu_printf("  7.                                                   \n\r");
-	_menu_printf("  8.                                                   \n\r");
+	_menu_printf("  5. Reset Setup                                       \n\r");
+	_menu_printf("  6. Change Bluetooth Name                             \n\r");
+	_menu_printf("  7. Use USB for Multiwii                              \n\r");
+	_menu_printf("  8. Monitor Msp                                       \n\r");
 	_menu_printf("  9.                                                   \n\r");
 	_menu_printf("  m.  Menu                                             \n\r");
 	_menu_printf("  z.  Go to bootloader                                 \n\r");
@@ -247,6 +247,34 @@ void thread_menu(void const *argument)
 					break;
 
 				case '5':
+					if (!f.ARMED)
+					{
+            			checkFirstTime(true);
+            		}
+					show_menu_flag = true;
+					break;
+
+				case '6':
+					cmd_bluetooth_change_name();
+					break;
+
+				case '7':
+					core.useVComMultiwii  = true;
+					_menu_printf("\r\nOK\r\n");
+					break;
+
+				case '8':
+					core.useShowMspCmd = true;
+					_menu_printf( "Monitor Start\r\n ");
+
+					while( !_menu_received() )
+					{
+						osDelay(100);
+					}
+					core.useShowMspCmd = false;
+
+					_menu_printf( "Monitor End\r\n ");
+
 					break;
 
 				case 'm':
@@ -462,6 +490,119 @@ void cmd_bluetooth_check( void )
 	}
 
 	_menu_printf("\r\n");
+
+	serialInit(mcfg.serial_baudrate);
+
+	osMutexRelease( Mutex_Loop );
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------
+     TITLE   : cmd_bluetooth_change_name
+     WORK    :
+     ARG     : void
+     RET     : void
+---------------------------------------------------------------------------*/
+void cmd_bluetooth_change_name( void )
+{
+	uint32_t time_out;
+	uint8_t  ch;
+	uint8_t  ch_array[20] = "AT+NAME";
+	uint8_t  ch_i;
+	uint8_t  ch_offset;
+
+	osStatus ret;
+
+
+	ret = osMutexWait( Mutex_Loop, 1000 );
+
+	if( ret != osOK )
+	{
+		_menu_printf("Fail to osMutexWait\r\n");
+		return;
+	}
+
+	core.blueport = uartOpen(USART2, NULL, 115200, MODE_RXTX);
+
+
+	//-- 이름 입력
+	//
+	_menu_printf("Enter Name : ");
+
+
+	ch_i = 0;
+	ch_offset = 7;
+
+	while(1)
+	{
+		if( _menu_received() > 0 )
+		{
+			ch = _menu_getch();
+
+			if( ch_i < 12 && ch != 0x0D )
+			{
+				ch_array[ch_offset+ch_i++] = ch;
+			}
+			else
+			{
+				break;
+			}
+
+			_menu_printf("%c", ch);
+
+			if( ch == 0x0D )
+			{
+				_menu_printf("\r\n");
+				break;
+			}
+		}
+	}
+
+	ch_array[ch_offset+ch_i] = 0;
+
+
+	//-- 블루투스 설정
+	//
+	//serialPrint(core.blueport, "AT+NAMEbaram1");
+	serialPrint(core.blueport, (const char *)ch_array);
+
+
+	ch_array[0] = 0;
+	ch_array[1] = 0;
+	ch_i  = 0;
+
+	//-- 응답이 올때까지 기다림
+	time_out = 1000;
+	while(time_out--)
+	{
+		if( serialTotalBytesWaiting(core.blueport) )
+		{
+			ch = serialRead(core.blueport);
+			//_menu_putch(ch);
+			ch_array[ch_i++] = ch;
+
+			if( ch_i >= 2 ) break;
+		}
+
+		osDelay(1);
+	}
+
+
+	if( ch_array[0] == 'O' && ch_array[1] == 'K' )
+	{
+		_menu_printf("\r\nBluetooth OK");
+	}
+	else
+	{
+		_menu_printf("\r\nBluetooth Fail");
+	}
+
+
+
+	_menu_printf("\r\nEnd\r\n");
 
 	serialInit(mcfg.serial_baudrate);
 

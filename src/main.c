@@ -218,6 +218,9 @@ int main(void)
 
     DEBUG_PRINT("Start\r\n");
 
+    core.useVComMultiwii = false;
+    core.useShowMspCmd   = false;
+
     //-- thread 시작
     //
     thread_main();

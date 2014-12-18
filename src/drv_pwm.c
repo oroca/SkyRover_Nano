@@ -82,6 +82,8 @@ static const uint8_t multiPPM[] = {
 
 #if defined(SKYROVER)
 
+
+#if defined(SKYROVER_HEX)
 static const uint8_t multiPWM[] = {
     PWM4  | TYPE_IW,     // input #1
     PWM3  | TYPE_IW,
@@ -99,7 +101,43 @@ static const uint8_t multiPWM[] = {
     PWM1  | TYPE_M,      // M5
     0xFF
 };
-
+#elif defined(SKYROVER_QUAD)
+static const uint8_t multiPWM[] = {
+    PWM4  | TYPE_IW,     // input #1
+    PWM3  | TYPE_IW,
+    PWM9  | TYPE_IW,
+    PWM10 | TYPE_IW,
+    PWM13 | TYPE_IW,
+    PWM14 | TYPE_IW,
+    PWM7  | TYPE_IW,
+    PWM2  | TYPE_IW,     // input #8
+    PWM11 | TYPE_IW,      // M4
+    PWM1  | TYPE_IW,      // M5
+    PWM5  | TYPE_M,      // M0
+    PWM12 | TYPE_M,      // M1
+    PWM6  | TYPE_M,      // M2
+    PWM8  | TYPE_M,      // M3
+    0xFF
+};
+#else
+static const uint8_t multiPWM[] = {
+    PWM4  | TYPE_IW,     // input #1
+    PWM3  | TYPE_IW,
+    PWM9  | TYPE_IW,
+    PWM10 | TYPE_IW,
+    PWM13 | TYPE_IW,
+    PWM14 | TYPE_IW,
+    PWM7  | TYPE_IW,
+    PWM2  | TYPE_IW,     // input #8
+    PWM5  | TYPE_M,      // M0
+    PWM12 | TYPE_M,      // M1
+    PWM6  | TYPE_M,      // M2
+    PWM8  | TYPE_M,      // M3
+    PWM11 | TYPE_M,      // M4
+    PWM1  | TYPE_M,      // M5
+    0xFF
+};
+#endif
 
 #else
 static const uint8_t multiPWM[] = {

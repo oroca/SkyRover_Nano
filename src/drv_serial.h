@@ -25,6 +25,7 @@ typedef struct serialPort {
 
     // FIXME rename member to rxCallback
     serialReceiveCallbackPtr callback;
+    bool	 ByPassToVCom;
 } serialPort_t;
 
 struct serialPortVTable {

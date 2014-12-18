@@ -271,6 +271,8 @@ void serialInit(uint32_t baudrate)
     	core.mainport  = uartOpen(USART2, NULL, baudrate, MODE_RXTX);
     }
 
+    core.mainport->ByPassToVCom = true;
+
 
     // calculate used boxes based on features and fill availableBoxes[] array
     memset(availableBoxes, 0xFF, sizeof(availableBoxes));
@@ -923,6 +925,21 @@ void serialCom(void)
         } else if (c_state == HEADER_CMD && offset >= dataSize) {
             if (checksum == c) {        // compare calculated and transferred checksum
                 evaluateCommand();      // we got a valid packet, evaluate it
+
+                if( core.useShowMspCmd == true )
+                {
+                	Hw_VCom_Printf("Cmd : %d, RC : %d, %d, %d, %d, %d, %d, %d, %d BARO:%d\r\n", cmdMSP
+                			,rcData[0]
+                			,rcData[1]
+                			,rcData[2]
+                  			,rcData[3]
+                   			,rcData[4]
+                   			,rcData[5]
+                   			,rcData[6]
+                           	,rcData[7]
+                           	,rcOptions[BOXBARO]
+                			);
+                }
             }
             c_state = IDLE;
         }

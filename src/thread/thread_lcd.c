@@ -185,6 +185,14 @@ void _draw_status( void )
     	tfp_sprintf( str, "A: %d", EstAlt );
     	u8g_DrawStr( &u8g, 0, line_space*4, str );
 
+    	//tfp_sprintf( str, "Head: %d", rcOptions[BOXHEADFREE] );
+    	//u8g_DrawStr( &u8g, 128/2, line_space*3, str );
+
+    	tfp_sprintf( str, "Baro: %d", rcOptions[BOXBARO] );
+    	u8g_DrawStr( &u8g, 128/2, line_space*4, str );
+
+
+
     } while ( u8g_NextPage(&u8g) );
 }
 

@@ -1,7 +1,7 @@
 #include "board.h"
 /*
     DMA UART routines idea lifted from AutoQuad
-    Copyright © 2011  Bill Nesbitt
+    Copyright ï¿½ 2011  Bill Nesbitt
 */
 
 static uartPort_t uartPort1;
@@ -92,6 +92,8 @@ uartPort_t *serialUSART2(uint32_t baudRate, portMode_t mode)
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
+
+    s->port.ByPassToVCom = false;
 
     return s;
 }

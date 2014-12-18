@@ -171,8 +171,15 @@ static void resetConf(void)
     memset(&cfg, 0, sizeof(config_t));
 
     mcfg.version = EEPROM_CONF_VERSION;
+
+#if defined(SKYROVER_HEX)
     mcfg.mixerConfiguration = MULTITYPE_HEX6; // 헥사콥터
-    //mcfg.mixerConfiguration = MULTITYPE_QUADX;  // 쿼드콥터
+#elif defined(SKYROVER_QUAD)
+    mcfg.mixerConfiguration = MULTITYPE_QUADX;  // 쿼드콥터
+#else
+    mcfg.mixerConfiguration = MULTITYPE_HEX6; // 헥사콥터
+#endif
+
     featureClearAll();    
     
     featureSet(FEATURE_SERIALRX);       // 시리얼포트로 HexAirBot 인터페이스 수신을 위해
@@ -276,7 +283,10 @@ static void resetConf(void)
     //     cfg.activate[i] = 0;
 
     //-- Angle모드를 디폴트로 활성화
-    cfg.activate[BOXANGLE] = 1;
+    cfg.activate[BOXANGLE]     = 1;			// AUX1가 1000이면 활성화
+    cfg.activate[BOXBARO]      = 4<<(3*1); 	// AUX2가 2000이면 활성화
+    cfg.activate[BOXHEADFREE]  = 4<<(3*0); 	// AUX2가 2000이면 활성화
+
 
     cfg.angleTrim[0] = 0;
     cfg.angleTrim[1] = 0;
