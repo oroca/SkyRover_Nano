@@ -241,7 +241,7 @@ static void resetConf(void)
     mcfg.rssi_aux_channel = 0;
 
     // SkyRover Setting
-    mcfg.uart1_type = _UART1_TYPE_NONE;	// Uart1을 멀티위 통신포트로 설정
+    mcfg.uart1_type = _UART1_TYPE_LCD;	// LCD를 기본 포트로 설정
 
     cfg.pidController = 0;
     cfg.P8[ROLL] = 40;
@@ -283,7 +283,7 @@ static void resetConf(void)
     //     cfg.activate[i] = 0;
 
     //-- Angle모드를 디폴트로 활성화
-    cfg.activate[BOXANGLE]     = 1;			// AUX1가 1000이면 활성화
+    cfg.activate[BOXANGLE]     = 7;			// AUX1가 1000~2000이면 활성화
     cfg.activate[BOXBARO]      = 4<<(3*1); 	// AUX2가 2000이면 활성화
     cfg.activate[BOXHEADFREE]  = 4<<(3*0); 	// AUX2가 2000이면 활성화
 
