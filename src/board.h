@@ -26,8 +26,8 @@
 
 #define _SKYROVER_VER_STR_  	"V141223R1"
 
-//#define SKYROVER_HEX
-#define SKYROVER_QUAD
+#define SKYROVER_HEX
+//#define SKYROVER_QUAD
 
 
 #define PORT_UART1				1
