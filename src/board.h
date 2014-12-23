@@ -24,7 +24,7 @@
 #include "drv_gpio.h"
 
 
-#define _SKYROVER_VER_STR_  	"V141219R1"
+#define _SKYROVER_VER_STR_  	"V141223R1"
 
 //#define SKYROVER_HEX
 #define SKYROVER_QUAD
@@ -218,8 +218,10 @@ typedef struct baro_t
 //#define LEDRING
 //#define SONAR
 //#define BUZZER
+#define ACC_AS_MAG
 
-#define SENSORS_SET (SENSOR_ACC | SENSOR_BARO | SENSOR_MAG )
+//#define SENSORS_SET (SENSOR_ACC | SENSOR_BARO | SENSOR_MAG )
+#define SENSORS_SET (SENSOR_ACC | SENSOR_BARO)
 
 
 // Helpful macros

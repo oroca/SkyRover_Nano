@@ -730,6 +730,29 @@ void loop(void)
         }
 #endif
 
+
+#ifdef ACC_AS_MAG
+        if (sensors(SENSOR_ACC))
+        {
+            if (rcOptions[BOXHEADFREE])
+            {
+                if (!f.HEADFREE_MODE)
+                {
+                    f.HEADFREE_MODE = 1;
+                }
+            }
+            else
+            {
+                f.HEADFREE_MODE = 0;
+            }
+            if (rcOptions[BOXHEADADJ])
+            {
+                headFreeModeHold = heading; // acquire new heading
+            }
+        }
+#endif
+
+
         if (sensors(SENSOR_GPS)) {
             if (f.GPS_FIX && GPS_numSat >= 5) {
                 // if both GPS_HOME & GPS_HOLD are checked => GPS_HOME is the priority
